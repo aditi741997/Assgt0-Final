@@ -1,6 +1,7 @@
 package nikhil.ayush.aditi.assgt0_final1;
 
 import android.net.Uri;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -80,6 +82,40 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void Add(View view)
+    {TextView name_3=(TextView) findViewById(R.id.name3);
+     TextView entry3=(TextView) findViewById(R.id.entry3);
+        EditText Name = (EditText) findViewById(R.id.Entry3);
+        EditText entry = (EditText) findViewById(R.id.Name3);
+        RadioButton add=(RadioButton) findViewById(R.id.add);
+        RadioButton sub=(RadioButton) findViewById(R.id.sub);
+
+        name_3.setVisibility(View.VISIBLE);
+        entry3.setVisibility(View.VISIBLE);
+        Name.setVisibility(View.VISIBLE);
+        entry.setVisibility(View.VISIBLE);
+        sub.setVisibility(View.VISIBLE);
+        add.setVisibility(View.INVISIBLE);
+        add.setChecked(false);
+        sub.setChecked(false);
+    }
+    public void sub(View view)
+    {TextView name_3=(TextView) findViewById(R.id.name3);
+        TextView entry3=(TextView) findViewById(R.id.entry3);
+        EditText Name = (EditText) findViewById(R.id.Entry3);
+        EditText entry = (EditText) findViewById(R.id.Name3);
+        RadioButton add=(RadioButton) findViewById(R.id.add);
+        RadioButton sub=(RadioButton) findViewById(R.id.sub);
+
+        name_3.setVisibility(View.INVISIBLE);
+        entry3.setVisibility(View.INVISIBLE);
+        Name.setVisibility(View.INVISIBLE);
+        entry.setVisibility(View.INVISIBLE);
+        sub.setVisibility(View.INVISIBLE);
+        add.setVisibility(View.VISIBLE);
+        add.setChecked(false);
+        sub.setChecked(false);
     }
 
     public void SendData(View view) throws JSONException {

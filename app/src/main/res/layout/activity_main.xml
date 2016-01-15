@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="nikhil.ayush.aditi.assgt0_final1.MainActivity"
-    tools:showIn="@layout/activity_main"
+
     android:background="#c3eb79">
 <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="600dp"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="COP 290"
+        android:text="@string/j"
         android:id="@+id/cop"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Team Registration"
-        android:id="@+id/treg"
+        android:id="@+id/App_name"
         android:layout_below="@+id/cop"
         android:layout_centerHorizontal="true" />
 
@@ -41,7 +41,7 @@
         android:text="Name 1"
         android:id="@+id/name1"
         android:layout_marginTop="32dp"
-        android:layout_below="@+id/treg"
+        android:layout_below="@+id/App_name"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -91,19 +91,19 @@
         android:id="@+id/Entry1"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-            android:layout_below="@+id/treg"
+            android:layout_below="@+id/App_name"
         android:layout_toRightOf="@+id/entry1"
         android:layout_toEndOf="@+id/entry1"
         android:layout_marginTop="47dp"
         android:layout_marginLeft="15dp"
-        />
+        android:inputType="none" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Name1"
         android:layout_marginTop="15dp"
-        android:layout_below="@+id/treg"
+        android:layout_below="@+id/App_name"
         android:layout_alignStart="@+id/Entry1"
         android:layout_alignLeft="@+id/Entry1"
         android:layout_alignEnd="@+id/Entry1"
@@ -114,7 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Name2"
-        android:layout_below="@+id/treg"
+        android:layout_below="@+id/App_name"
         android:layout_alignStart="@+id/Entry1"
         android:layout_alignLeft="@+id/Entry1"
         android:layout_alignEnd="@+id/Entry1"
@@ -125,7 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Entry2"
-        android:layout_below="@+id/treg"
+        android:layout_below="@+id/App_name"
         android:layout_alignStart="@+id/Entry1"
         android:layout_alignLeft="@+id/Entry1"
         android:layout_alignEnd="@+id/Entry1"
@@ -133,26 +133,28 @@
         android:layout_marginTop="129dp" />
 
     <EditText
+        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Name3"
-        android:layout_below="@+id/treg"
+        android:layout_below="@+id/App_name"
         android:layout_alignStart="@+id/Entry1"
         android:layout_alignLeft="@+id/Entry1"
         android:layout_alignEnd="@+id/Entry1"
         android:layout_alignRight="@+id/Entry1"
-        android:layout_marginTop="179dp" />
+        android:layout_marginTop="189dp" />
 
     <EditText
+        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Entry3"
-        android:layout_below="@+id/treg"
+        android:layout_below="@+id/App_name"
         android:layout_alignStart="@+id/Entry1"
         android:layout_alignLeft="@+id/Entry1"
         android:layout_alignEnd="@+id/Entry1"
         android:layout_alignRight="@+id/Entry1"
-        android:layout_marginTop="211dp"
+        android:layout_marginTop="220dp"
  />
 
     <TextView
@@ -164,9 +166,11 @@
         android:layout_below="@+id/entry2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="32dp"/>
+        android:layout_marginTop="40dp"
+        android:visibility="invisible" />
 
     <TextView
+        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -201,5 +205,32 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
  />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Another Member"
+        android:id="@+id/add"
+        android:layout_below="@+id/entry2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:checked="false"
+        android:onClick="Add"
+        android:visibility="invisible"/>
+
+    <RadioButton
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Only two members  "
+        android:id="@+id/sub"
+        android:layout_alignTop="@+id/add"
+        android:layout_toLeftOf="@+id/msg"
+        android:layout_toStartOf="@+id/msg"
+        android:onClick="sub"
+        android:checked="false" />
+
 </RelativeLayout>
+
 </ScrollView>
