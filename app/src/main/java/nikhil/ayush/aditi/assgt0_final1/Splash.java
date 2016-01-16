@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.View;
 
 public class Splash extends AppCompatActivity {
-    private final int splash_time = 1500;
+    private final int splash_time = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
