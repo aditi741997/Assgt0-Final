@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="nikhil.ayush.aditi.assgt0_final1.FinalScreen"
+    tools:showIn="@layout/activity_final_screen"
+    android:id="@+id/Final_Layout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Message"
+        android:id="@+id/CongratsText"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/YourTeam"
+        android:id="@+id/yourteam"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/context"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="32dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/TeamName"
+        android:id="@+id/TeamName"
+        android:layout_alignTop="@+id/yourteam"
+        android:layout_toRightOf="@id/yourteam"
+        android:layout_marginLeft="24dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/Content"
+        android:id="@+id/context"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/CongratsText"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/Username"
+        android:id="@+id/Names"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/yourteam"
+        android:layout_alignStart="@+id/yourteam"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/EntryNo"
+        android:id="@+id/entry"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/Names"
+        android:layout_toRightOf="@id/Names"
+        android:layout_marginLeft="60dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/Name1"
+        android:id="@+id/Name_1"
+        android:layout_below="@+id/Names"
+        android:layout_alignLeft="@+id/Names"
+        android:layout_alignStart="@+id/Names"
+        android:layout_marginTop="23dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/Name2"
+        android:id="@+id/Name_2"
+        android:layout_below="@+id/Name_1"
+        android:layout_alignLeft="@+id/Name_1"
+        android:layout_alignStart="@+id/Name_1"
+        android:layout_marginTop="24dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/Name3"
+        android:id="@+id/Name_3"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/Name_2"
+        android:layout_alignLeft="@+id/Name_2"
+        android:layout_alignStart="@+id/Name_2"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/No1"
+        android:id="@+id/EntryNo.1"
+        android:layout_alignTop="@+id/Name_1"
+        android:layout_alignLeft="@+id/entry"
+        android:layout_alignStart="@+id/entry"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/No2"
+        android:id="@+id/EntryNo.2"
+        android:layout_alignTop="@+id/Name_2"
+        android:layout_alignLeft="@+id/EntryNo.1"
+        android:layout_alignStart="@+id/EntryNo.1"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/No3"
+        android:id="@+id/EntryNo.3"
+        android:layout_alignBottom="@+id/Name_3"
+        android:layout_alignLeft="@+id/EntryNo.2"
+        android:layout_alignStart="@+id/EntryNo.2"
+        android:textColor="#000000" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Button_Text"
+        android:id="@+id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Do you want to register another team?"
+        android:id="@+id/SmallText"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
