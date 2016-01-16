@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -22,15 +27,22 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/j"
         android:id="@+id/cop"
+        android:fontFamily="@string/font"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="45dp"
+
+        android:textColorHighlight="#ffffff" />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Team Registration"
+        android:text="@string/teamreg"
         android:id="@+id/App_name"
+        android:fontFamily="@string/font"
         android:layout_below="@+id/cop"
         android:layout_centerHorizontal="true" />
 
@@ -40,6 +52,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Name 1"
         android:id="@+id/name1"
+        android:fontFamily="@string/font"
         android:layout_marginTop="32dp"
         android:layout_below="@+id/App_name"
         android:layout_alignParentLeft="true"
@@ -51,6 +64,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Entry No. 1"
         android:id="@+id/entry1"
+        android:fontFamily="@string/font"
         android:layout_below="@+id/name1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -62,6 +76,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Name 2"
         android:id="@+id/name2"
+        android:fontFamily="@string/font"
         android:layout_below="@+id/entry1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -73,6 +88,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Entry No. 2"
         android:id="@+id/entry2"
+        android:fontFamily="@string/font"
         android:layout_below="@+id/name2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -163,6 +179,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Name 3"
         android:id="@+id/name3"
+        android:fontFamily="@string/font"
         android:layout_below="@+id/entry2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -175,6 +192,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Entry No. 3"
+        android:fontFamily="@string/font"
         android:id="@+id/entry3"
         android:layout_below="@+id/name3"
         android:layout_alignParentLeft="true"
@@ -201,36 +219,79 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Message"
         android:id="@+id/msg"
+        android:fontFamily="sans-serif-light"
         android:layout_below="@+id/entry3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"
  />
 
-    <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Another Member"
+    <Button
+        android:text="+"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
         android:id="@+id/add"
         android:layout_below="@+id/entry2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="5dp"
-        android:checked="false"
+        android:layout_marginTop="25dp"
         android:onClick="Add"
-        android:visibility="invisible"/>
+        android:visibility="visible"/>
 
-    <RadioButton
-        android:visibility="visible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Only two members  "
+ 
+    <!--<RadioButton-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Add Another Member"-->
+        <!--android:id="@+id/add"-->
+        <!--android:layout_below="@+id/entry2"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:checked="false"-->
+        <!--android:onClick="Add"-->
+        <!--android:visibility="visible"/>-->
+    <Button
         android:id="@+id/sub"
+
+        android:text="-"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonshape2"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
         android:layout_alignTop="@+id/add"
         android:layout_toLeftOf="@+id/msg"
         android:layout_toStartOf="@+id/msg"
         android:onClick="sub"
-        android:checked="false" />
+        android:visibility="invisible"
+    />
+
+<!--<RadioButton-->
+        <!--android:visibility="invisible"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Only two members  "-->
+        <!--android:id="@+id/sub"-->
+        <!--android:layout_alignTop="@+id/add"-->
+        <!--android:layout_toLeftOf="@+id/msg"-->
+        <!--android:layout_toStartOf="@+id/msg"-->
+        <!--android:onClick="sub"-->
+        <!--android:checked="false" />-->
 
 </RelativeLayout>
 
 </ScrollView>
+</android.support.v4.widget.DrawerLayout>

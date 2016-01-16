@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -45,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+        setContentView(R.layout.content_main);
+       Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -88,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
      TextView entry3=(TextView) findViewById(R.id.entry3);
         EditText Name = (EditText) findViewById(R.id.Entry3);
         EditText entry = (EditText) findViewById(R.id.Name3);
-        RadioButton add=(RadioButton) findViewById(R.id.add);
-        RadioButton sub=(RadioButton) findViewById(R.id.sub);
+        Button add=(Button) findViewById(R.id.add);
+        Button sub=(Button) findViewById(R.id.sub);
 
         name_3.setVisibility(View.VISIBLE);
         entry3.setVisibility(View.VISIBLE);
@@ -97,16 +98,16 @@ public class MainActivity extends AppCompatActivity {
         entry.setVisibility(View.VISIBLE);
         sub.setVisibility(View.VISIBLE);
         add.setVisibility(View.INVISIBLE);
-        add.setChecked(false);
-        sub.setChecked(false);
+//        add.setChecked(false);
+//        sub.setChecked(false);
     }
     public void sub(View view)
     {TextView name_3=(TextView) findViewById(R.id.name3);
         TextView entry3=(TextView) findViewById(R.id.entry3);
         EditText Name = (EditText) findViewById(R.id.Entry3);
         EditText entry = (EditText) findViewById(R.id.Name3);
-        RadioButton add=(RadioButton) findViewById(R.id.add);
-        RadioButton sub=(RadioButton) findViewById(R.id.sub);
+        Button add=(Button) findViewById(R.id.add);
+        Button sub=(Button) findViewById(R.id.sub);
 
         name_3.setVisibility(View.INVISIBLE);
         entry3.setVisibility(View.INVISIBLE);
@@ -114,8 +115,6 @@ public class MainActivity extends AppCompatActivity {
         entry.setVisibility(View.INVISIBLE);
         sub.setVisibility(View.INVISIBLE);
         add.setVisibility(View.VISIBLE);
-        add.setChecked(false);
-        sub.setChecked(false);
     }
 
     public void SendData(View view) throws JSONException {
