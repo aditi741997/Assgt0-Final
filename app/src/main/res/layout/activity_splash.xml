@@ -32,12 +32,24 @@
         <!--android:src="@android:drawable/ic_dialog_email" />-->
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:src="@drawable/cars"/>
+        android:src="@drawable/check"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-    <TextView android:layout_width="fill_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Splash!"/>
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Register"
+        android:id="@+id/Text"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="151dp"
+        android:textStyle="bold|italic"
+        android:textSize="@dimen/abc_alert_dialog_button_bar_height"
+        android:textColor="#e2f4fa" />
 
 </RelativeLayout>

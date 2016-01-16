@@ -3,7 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_splash">Splash</string>
     <string name="j">COP 290</string>
-<<<<<<< HEAD
     <string name="title_activity_final_screen">FinalScreen</string>
     <string name="YourTeam">Your team</string>
     <string name="Message">Congratulations!</string>
@@ -18,8 +17,6 @@
     <string name="No2">EntryNo.2</string>
     <string name="No3">EntryNo.3</string>
     <string name="Button_Text">Register Again</string>
-=======
     <string name="teamreg">Team Registration</string>
     <string name="font">sans-serif-medium</string>
->>>>>>> 737e3bf0eea761c44cf5fcf876e2029e8f109551
 </resources>

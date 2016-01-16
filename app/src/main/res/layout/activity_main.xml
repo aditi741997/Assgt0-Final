@@ -272,12 +272,12 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
-        android:layout_alignTop="@+id/add"
-        android:layout_toLeftOf="@+id/msg"
-        android:layout_toStartOf="@+id/msg"
         android:onClick="sub"
         android:visibility="invisible"
-    />
+        android:layout_below="@+id/Entry3"
+        android:layout_alignRight="@+id/name3"
+        android:layout_alignEnd="@+id/name3"
+        android:layout_marginTop="15dp"/>
 
 <!--<RadioButton-->
         <!--android:visibility="invisible"-->
