@@ -16,6 +16,10 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
+import android.view.MotionEvent;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+
 
 
 import com.android.volley.Request;
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main);
-       Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -102,7 +106,25 @@ public class MainActivity extends AppCompatActivity {
         add.setVisibility(View.INVISIBLE);
 //        add.setChecked(false);
 //        sub.setChecked(false);
+ //       movebutton();
     }
+
+//    public void movebutton(){
+//    View PlusButton = findViewById(R.id.add);
+//     //Change the size of the button
+//        RelativeLayout.LayoutParams positionRules = new RelativeLayout.LayoutParams(
+//                RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+//        positionRules.addRule(RelativeLayout.TRANSLATION_X, RelativeLayout.TRUE);
+//        positionRules.addRule(RelativeLayout.ALIGN_PARENT_LEFT, RelativeLayout.TRUE);
+//        PlusButton.setLayoutParams(positionRules);
+//
+//    //Change size and shape
+//        ViewGroup.LayoutParams sizeRules = PlusButton.getLayoutParams();
+//        sizeRules.height = 120;
+//        sizeRules.width = 120;
+//        PlusButton.setLayoutParams(sizeRules);
+//    }
+
     public void sub(View view)
     {TextView name_3=(TextView) findViewById(R.id.name3);
         TextView entry3=(TextView) findViewById(R.id.entry3);
@@ -117,6 +139,42 @@ public class MainActivity extends AppCompatActivity {
         entry.setVisibility(View.INVISIBLE);
         sub.setVisibility(View.INVISIBLE);
         add.setVisibility(View.VISIBLE);
+    }
+
+
+    public void SendRegistration(View view){
+
+        Intent i = new Intent(this, FinalScreen.class);
+
+        final EditText Name_Team = (EditText) findViewById(R.id.TeamText);
+        String TeamName = Name_Team.getText().toString();
+        i.putExtra("TeamName", TeamName);
+
+        final EditText Name1 = (EditText) findViewById(R.id.Name1);
+        String FirstName = Name1.getText().toString();
+        i.putExtra("FirstName", FirstName);
+
+        final EditText Name2 = (EditText) findViewById(R.id.Name2);
+        String SecondName = Name2.getText().toString();
+        i.putExtra("SecondName", SecondName);
+
+        final EditText Name3 = (EditText) findViewById(R.id.Name3);
+        String ThirdName = Name3.getText().toString();
+        i.putExtra("ThirdName", ThirdName);
+
+        final EditText Number1 = (EditText) findViewById(R.id.Entry1);
+        String FirstNumber = Number1.getText().toString();
+        i.putExtra("FirstNumber", FirstNumber);
+
+        final EditText Number2 = (EditText) findViewById(R.id.Entry2);
+        String SecondNumber = Number2.getText().toString();
+        i.putExtra("SecondNumber", SecondNumber);
+
+        final EditText Number3 = (EditText) findViewById(R.id.Entry3);
+        String ThirdNumber = Number3.getText().toString();
+        i.putExtra("ThirdNumber", ThirdNumber);
+
+        startActivity(i);
     }
 
     public void SendData(View view) throws JSONException {
@@ -158,6 +216,39 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         Volley.newRequestQueue(this).add(stringRequest);
+
+        Intent i = new Intent(this, FinalScreen.class);
+
+        final EditText Name_Team = (EditText) findViewById(R.id.TeamText);
+        String TeamName = Name_Team.getText().toString();
+        i.putExtra("TeamName", TeamName);
+
+        final EditText Name1 = (EditText) findViewById(R.id.Name1);
+        String FirstName = Name1.getText().toString();
+        i.putExtra("FirstName", FirstName);
+
+        final EditText Name2 = (EditText) findViewById(R.id.Name2);
+        String SecondName = Name2.getText().toString();
+        i.putExtra("SecondName", SecondName);
+
+        final EditText Name3 = (EditText) findViewById(R.id.Name3);
+        String ThirdName = Name3.getText().toString();
+        i.putExtra("ThirdName", ThirdName);
+
+        final EditText Number1 = (EditText) findViewById(R.id.Entry1);
+        String FirstNumber = Number1.getText().toString();
+        i.putExtra("FirstNumber", FirstNumber);
+
+        final EditText Number2 = (EditText) findViewById(R.id.Entry2);
+        String SecondNumber = Number2.getText().toString();
+        i.putExtra("SecondNumber", SecondNumber);
+
+        final EditText Number3 = (EditText) findViewById(R.id.Entry3);
+        String ThirdNumber = Number3.getText().toString();
+        i.putExtra("ThirdNumber", ThirdNumber);
+
+        startActivity(i);
+
     }
     @Override
     public void onStart() {

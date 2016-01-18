@@ -13,7 +13,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <!--
              ATTENTION: This was auto-generated to add Google Play services to your project for
              App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -35,6 +35,10 @@
         <activity
             android:name=".FinalScreen"
             android:label="@string/title_activity_final_screen"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyFirstAnimation"
+            android:label="@string/title_activity_my_first_animation"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

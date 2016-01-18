@@ -31,9 +31,10 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
 
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="65dp"
 
-        android:textColorHighlight="#ffffff" />
+        android:textColorHighlight="#c10e0e"
+        android:textColor="#c01414" />
 
 
     <TextView
@@ -44,7 +45,8 @@
         android:id="@+id/App_name"
         android:fontFamily="@string/font"
         android:layout_below="@+id/cop"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="#173293" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -53,22 +55,24 @@
         android:text="Name 1"
         android:id="@+id/name1"
         android:fontFamily="@string/font"
-        android:layout_marginTop="32dp"
-        android:layout_below="@+id/App_name"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/Name_Team"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="#456423" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Entry No. 1"
+        android:text="Entry No."
         android:id="@+id/entry1"
         android:fontFamily="@string/font"
         android:layout_below="@+id/name1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="10dp"
+        android:textColor="#456423" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -80,98 +84,67 @@
         android:layout_below="@+id/entry1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="32dp" />
+        android:layout_marginTop="28dp"
+        android:textColor="#456423" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Entry No. 2"
+        android:text="Entry No."
         android:id="@+id/entry2"
         android:fontFamily="@string/font"
         android:layout_below="@+id/name2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="8dp"/>
-
-
-    <!--         android:layout_above="@+id/treg"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2"-->
+        android:layout_marginTop="10dp"
+        android:textColor="#456423" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Entry1"
+        android:layout_marginBottom="-10dp"
+        android:layout_alignBottom="@id/entry1"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-            android:layout_below="@+id/App_name"
-        android:layout_toRightOf="@+id/entry1"
-        android:layout_toEndOf="@+id/entry1"
-        android:layout_marginTop="47dp"
-        android:layout_marginLeft="15dp"
+        android:layout_alignLeft="@id/App_name"
+        android:layout_marginLeft="0dp"
         android:inputType="none" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Name1"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/App_name"
-        android:layout_alignStart="@+id/Entry1"
-        android:layout_alignLeft="@+id/Entry1"
-        android:layout_alignEnd="@+id/Entry1"
-        android:layout_alignRight="@+id/Entry1"
+        android:layout_marginBottom="-10dp"
+        android:layout_alignBottom="@id/name1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@id/App_name"
+        android:layout_marginLeft="0dp"
         />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Name2"
-        android:layout_below="@+id/App_name"
-        android:layout_alignStart="@+id/Entry1"
-        android:layout_alignLeft="@+id/Entry1"
-        android:layout_alignEnd="@+id/Entry1"
-        android:layout_alignRight="@+id/Entry1"
-        android:layout_marginTop="97dp"/>
+        android:layout_marginBottom="-10dp"
+        android:layout_alignBottom="@id/name2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@id/App_name"
+        android:layout_marginLeft="0dp"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Entry2"
-        android:layout_below="@+id/App_name"
-        android:layout_alignStart="@+id/Entry1"
-        android:layout_alignLeft="@+id/Entry1"
-        android:layout_alignEnd="@+id/Entry1"
-        android:layout_alignRight="@+id/Entry1"
-        android:layout_marginTop="129dp" />
-
-    <EditText
-        android:visibility="invisible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Name3"
-        android:layout_below="@+id/App_name"
-        android:layout_alignStart="@+id/Entry1"
-        android:layout_alignLeft="@+id/Entry1"
-        android:layout_alignEnd="@+id/Entry1"
-        android:layout_alignRight="@+id/Entry1"
-        android:layout_marginTop="189dp" />
-
-    <EditText
-        android:visibility="invisible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Entry3"
-        android:layout_below="@+id/App_name"
-        android:layout_alignStart="@+id/Entry1"
-        android:layout_alignLeft="@+id/Entry1"
-        android:layout_alignEnd="@+id/Entry1"
-        android:layout_alignRight="@+id/Entry1"
-        android:layout_marginTop="220dp"
- />
+        android:layout_marginBottom="-10dp"
+        android:layout_alignBottom="@id/entry2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@id/App_name"
+        android:layout_marginLeft="0dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -183,35 +156,63 @@
         android:layout_below="@+id/entry2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="40dp"
-        android:visibility="invisible" />
+        android:layout_marginTop="28dp"
+        android:visibility="invisible"
+        android:textColor="#456423" />
+
+
+    <EditText
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Name3"
+        android:layout_marginBottom="-10dp"
+        android:layout_alignBottom="@id/name3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@id/App_name"
+        android:layout_marginLeft="0dp" />
 
     <TextView
         android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Entry No. 3"
+        android:text="Entry No."
         android:fontFamily="@string/font"
         android:id="@+id/entry3"
         android:layout_below="@+id/name3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="10dp"
+        android:textColor="#456423" />
 
 
-
-
-
-    <Button
+    <EditText
+        android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register the team"
+        android:id="@+id/Entry3"
+        android:layout_marginBottom="-10dp"
+        android:layout_alignBottom="@id/entry3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@id/App_name"
+        android:layout_marginLeft="0dp" />
+
+    <Button
+        android:text="Register Team"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:background="@drawable/buttonshape2"
         android:id="@+id/submit"
         android:layout_below="@+id/entry3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:onClick="SendData"/>
+        android:onClick="SendRegistration"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -220,20 +221,20 @@
         android:text="Message"
         android:id="@+id/msg"
         android:fontFamily="sans-serif-light"
-        android:layout_below="@+id/entry3"
+        android:layout_below="@+id/submit"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp"
- />
+        android:layout_marginTop="20dp"
+        android:textColor="#456423" />
 
     <Button
         android:text="+"
-        android:textColor="#FFFFFF"
+        android:textColor="#456423"
         android:textSize="30sp"
 
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:background="@drawable/buttonshape"
-        android:shadowColor="#A8A8A8"
+        android:shadowColor="#456423"
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
@@ -261,25 +262,48 @@
     <Button
         android:id="@+id/sub"
 
-        android:text="-"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/buttonshape2"
+        android:text="X"
+        android:textColor="#C20202"
+        android:textSize="20sp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/buttonshape3"
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
         android:onClick="sub"
-        android:visibility="invisible"
-        android:layout_below="@+id/Entry3"
-        android:layout_alignRight="@+id/name3"
-        android:layout_alignEnd="@+id/name3"
-        android:layout_marginTop="15dp"/>
+        android:visibility="visible"
+        android:layout_below="@+id/entry2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="85dp" />
 
-<!--<RadioButton-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Team Name"
+        android:id="@+id/Name_Team"
+        android:fontFamily="@string/font"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/App_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#456423" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TeamText"
+        android:layout_marginBottom="-10dp"
+        android:layout_alignBottom="@id/Name_Team"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@id/App_name"
+        android:layout_marginLeft="20dp"/>
+
+    <!--<RadioButton-->
         <!--android:visibility="invisible"-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->

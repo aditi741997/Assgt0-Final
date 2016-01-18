@@ -18,11 +18,11 @@
         android:bottom="3dp"
         />
     <size
-        android:width="60dp"
-        android:height="60dp"
+        android:width="45dp"
+        android:height="45dp"
         />
     <stroke
         android:width="2dp"
-        android:color="#456423"
+        android:color="#C20202"
         />
 </shape>
