@@ -110,7 +110,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignLeft="@id/App_name"
         android:layout_marginLeft="0dp"
-        android:inputType="none" />
+
+        android:padding="3dp"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:hint="TeamName"
+        android:inputType="text"
+        android:textSize="20dp"
+        android:background="@drawable/edittextstyle" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -122,6 +129,13 @@
         android:layout_alignParentEnd="true"
         android:layout_alignLeft="@id/App_name"
         android:layout_marginLeft="0dp"
+        android:padding="3dp"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:hint="Name1"
+        android:inputType="text"
+        android:textSize="20dp"
+        android:background="@drawable/edittextstyle"
         />
 
     <EditText
@@ -289,7 +303,9 @@
         android:textColor="#456423" />
 
     <EditText
+
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
         android:id="@+id/TeamText"
         android:layout_marginBottom="-10dp"
@@ -297,7 +313,15 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignLeft="@id/App_name"
-        android:layout_marginLeft="10dp"/>
+
+        android:layout_marginLeft="10dp"
+        android:padding="3dp"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:hint="TeamName"
+        android:inputType="text"
+        android:textSize="20dp"
+        android:background="@drawable/edittextstyle" />
 
     <!--<RadioButton-->
         <!--android:visibility="invisible"-->
