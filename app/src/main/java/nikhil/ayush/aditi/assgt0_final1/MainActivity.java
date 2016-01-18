@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -15,8 +16,6 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.content.Intent;
-
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -37,7 +36,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-
+    //Edit it
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -49,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main);
-       Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //      Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -87,8 +86,8 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void Add(View view)
-    {TextView name_3=(TextView) findViewById(R.id.name3);
-     TextView entry3=(TextView) findViewById(R.id.entry3);
+    {  TextView name_3=(TextView) findViewById(R.id.name3);
+        TextView entry3=(TextView) findViewById(R.id.entry3);
         EditText Name = (EditText) findViewById(R.id.Entry3);
         EditText entry = (EditText) findViewById(R.id.Name3);
         Button add=(Button) findViewById(R.id.add);
@@ -104,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 //        sub.setChecked(false);
     }
     public void sub(View view)
-    {TextView name_3=(TextView) findViewById(R.id.name3);
+    {   TextView name_3=(TextView) findViewById(R.id.name3);
         TextView entry3=(TextView) findViewById(R.id.entry3);
         EditText Name = (EditText) findViewById(R.id.Entry3);
         EditText entry = (EditText) findViewById(R.id.Name3);
@@ -119,115 +118,107 @@ public class MainActivity extends AppCompatActivity {
         add.setVisibility(View.VISIBLE);
     }
 
-
-    public void SendRegistration(View view){
-
-        Intent i = new Intent(this, FinalScreen.class);
-
-        final EditText Name_Team = (EditText) findViewById(R.id.TeamText);
-        String TeamName = Name_Team.getText().toString();
-        i.putExtra("TeamName", TeamName);
-
-        final EditText Name1 = (EditText) findViewById(R.id.Name1);
-        String FirstName = Name1.getText().toString();
-        i.putExtra("FirstName", FirstName);
-
-        final EditText Name2 = (EditText) findViewById(R.id.Name2);
-        String SecondName = Name2.getText().toString();
-        i.putExtra("SecondName", SecondName);
-
-        final EditText Name3 = (EditText) findViewById(R.id.Name3);
-        String ThirdName = Name3.getText().toString();
-        i.putExtra("ThirdName", ThirdName);
-
-        final EditText Number1 = (EditText) findViewById(R.id.Entry1);
-        String FirstNumber = Number1.getText().toString();
-        i.putExtra("FirstNumber", FirstNumber);
-
-        final EditText Number2 = (EditText) findViewById(R.id.Entry2);
-        String SecondNumber = Number2.getText().toString();
-        i.putExtra("SecondNumber", SecondNumber);
-
-        final EditText Number3 = (EditText) findViewById(R.id.Entry3);
-        String ThirdNumber = Number3.getText().toString();
-        i.putExtra("ThirdNumber", ThirdNumber);
-
-        startActivity(i);
-    }
-
     public void SendData(View view) throws JSONException {
 //        fetch data of all fields. then send json to server.
         String url = "http://agni.iitd.ernet.in/cop290/assign0/register/";
+        //EditText teamname = (EditText) findViewById(R.id.Name1);
+        TextView name_1=(TextView) findViewById(R.id.name1);
+        TextView entry1=(TextView) findViewById(R.id.entry1);
+        TextView name_2=(TextView) findViewById(R.id.name2);
+        TextView entry2=(TextView) findViewById(R.id.entry2);
+        TextView name_3=(TextView) findViewById(R.id.name3);
+        TextView entry3=(TextView) findViewById(R.id.entry3);
+        EditText Name1 = (EditText) findViewById(R.id.Name1);
+        EditText Entry1 = (EditText) findViewById(R.id.Entry1);
+
+        EditText Name2 = (EditText) findViewById(R.id.Name2);
+        EditText Entry2 = (EditText) findViewById(R.id.Entry2);
+        EditText Name3 = (EditText) findViewById(R.id.Name3);
+        EditText Entry3 = (EditText) findViewById(R.id.Entry3);
+        Button add=(Button) findViewById(R.id.add);
+        Button sub=(Button) findViewById(R.id.sub);
+        boolean b=(add.getVisibility()==View.VISIBLE);
         EditText teamname = (EditText) findViewById(R.id.Name1);
+        final TextView message=(TextView) findViewById(R.id.msg);
 
-//        Request.Method.POST :
+        Check_constraints checker=new Check_constraints();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Toast.makeText(MainActivity.this, response, Toast.LENGTH_LONG).show();
-                        TextView tt = (TextView) findViewById(R.id.msg);
-                        tt.setText(response.toString() + " is the response from the server.");
+        if(b)
+        {
+            Name3.setText("");Entry3.setText("");
+        }
+        if(!checker.teamname(teamname.getText().toString()))
+        {
+            Log.i("this",teamname.getText().toString());
+            message.setText("TeamName should contain only Albhabets");
+        }
+        else if(!((checker.NAME(Name1.getText().toString()))&&(checker.NAME(Name1.getText().toString()))&&(checker.NAME(Name1.getText().toString()))))
+        {
+            Log.i("this",Name1.getText().toString());
+            message.setText("Enter a valid name");
+        }
+        else if(!((checker.EntryNo(Entry1.getText().toString()))&&checker.EntryNo(Entry2.getText().toString())&&checker.EntryNo(Entry3.getText().toString())))
+        { Log.i("this",Entry1.getText().toString());
+            message.setText("Enter a valid Entry Number");}
 
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
-                    }
-                }) {
-            @Override
-            protected Map<String, String> getParams()
-            {
+        //        Request.Method.POST :
+        else if(!checker.Diff_EntryNo(Entry1.getText().toString(),Entry2.getText().toString(),Entry3.getText().toString(),b))
+        {
+            message.setText("All Entry no. should be different");
+        }
+        else{
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            Toast.makeText(MainActivity.this, response, Toast.LENGTH_LONG).show();
+                            TextView tt = (TextView) findViewById(R.id.msg);
+                            String str=response.toString();
+                       /* if(str.equals())
+                        {
+                            message.setText("Team Not Registered : Team name already exists");
+                        }
+                        else if(str.equals())
+                        {//use of intents to start a new screen
+
+                        }*/
+                            tt.setText(response.toString() + " is the response from the server.");
+
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
+                        }
+                    }) {
+                @Override
+                protected Map<String, String> getParams()
+                { EditText Name1 = (EditText) findViewById(R.id.Name1);
+                    EditText Entry1 = (EditText) findViewById(R.id.Entry1);
+
+                    EditText Name2 = (EditText) findViewById(R.id.Name2);
+                    EditText Entry2 = (EditText) findViewById(R.id.Entry2);
+
+                    EditText Name3 = (EditText) findViewById(R.id.Name3);
+                    EditText Entry3 = (EditText) findViewById(R.id.Entry3);
+
 //                params to be sent
-                Map<String, String> params = new HashMap<String, String>();
-                params.put("teamname", "blah");
-                params.put("entry1", "blah2");
-                params.put("name1", "abc");
-                params.put("entry2", "def");
-                params.put("name2", "ab");
-                params.put("entry3", "bn");
-                params.put("name3", "nb");
-                return params;
-            }
-        };
-        Volley.newRequestQueue(this).add(stringRequest);
+                    Map<String, String> params = new HashMap<String, String>();
+                    params.put("teamname", "");
+                    params.put("entry1", Entry1.getText().toString());
+                    params.put("name1", Name1.getText().toString());
+                    params.put("entry2", Entry2.getText().toString());
+                    params.put("name2", Name2.getText().toString());
+                    params.put("entry3", Entry3.getText().toString());
+                    params.put("name3", Name3.getText().toString());
 
-        Intent i = new Intent(this, FinalScreen.class);
 
-        final EditText Name_Team = (EditText) findViewById(R.id.TeamText);
-        String TeamName = Name_Team.getText().toString();
-        i.putExtra("TeamName", TeamName);
-
-        final EditText Name1 = (EditText) findViewById(R.id.Name1);
-        String FirstName = Name1.getText().toString();
-        i.putExtra("FirstName", FirstName);
-
-        final EditText Name2 = (EditText) findViewById(R.id.Name2);
-        String SecondName = Name2.getText().toString();
-        i.putExtra("SecondName", SecondName);
-
-        final EditText Name3 = (EditText) findViewById(R.id.Name3);
-        String ThirdName = Name3.getText().toString();
-        i.putExtra("ThirdName", ThirdName);
-
-        final EditText Number1 = (EditText) findViewById(R.id.Entry1);
-        String FirstNumber = Number1.getText().toString();
-        i.putExtra("FirstNumber", FirstNumber);
-
-        final EditText Number2 = (EditText) findViewById(R.id.Entry2);
-        String SecondNumber = Number2.getText().toString();
-        i.putExtra("SecondNumber", SecondNumber);
-
-        final EditText Number3 = (EditText) findViewById(R.id.Entry3);
-        String ThirdNumber = Number3.getText().toString();
-        i.putExtra("ThirdNumber", ThirdNumber);
-
-        startActivity(i);
-
-    }
+                    return params;
+                }
+            };
+            Volley.newRequestQueue(this).add(stringRequest);
+        }}
     @Override
     public void onStart() {
         super.onStart();
