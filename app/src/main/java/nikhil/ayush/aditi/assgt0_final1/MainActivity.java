@@ -119,6 +119,42 @@ public class MainActivity extends AppCompatActivity {
         add.setVisibility(View.VISIBLE);
     }
 
+
+    public void SendRegistration(View view){
+
+        Intent i = new Intent(this, FinalScreen.class);
+
+        final EditText Name_Team = (EditText) findViewById(R.id.TeamText);
+        String TeamName = Name_Team.getText().toString();
+        i.putExtra("TeamName", TeamName);
+
+        final EditText Name1 = (EditText) findViewById(R.id.Name1);
+        String FirstName = Name1.getText().toString();
+        i.putExtra("FirstName", FirstName);
+
+        final EditText Name2 = (EditText) findViewById(R.id.Name2);
+        String SecondName = Name2.getText().toString();
+        i.putExtra("SecondName", SecondName);
+
+        final EditText Name3 = (EditText) findViewById(R.id.Name3);
+        String ThirdName = Name3.getText().toString();
+        i.putExtra("ThirdName", ThirdName);
+
+        final EditText Number1 = (EditText) findViewById(R.id.Entry1);
+        String FirstNumber = Number1.getText().toString();
+        i.putExtra("FirstNumber", FirstNumber);
+
+        final EditText Number2 = (EditText) findViewById(R.id.Entry2);
+        String SecondNumber = Number2.getText().toString();
+        i.putExtra("SecondNumber", SecondNumber);
+
+        final EditText Number3 = (EditText) findViewById(R.id.Entry3);
+        String ThirdNumber = Number3.getText().toString();
+        i.putExtra("ThirdNumber", ThirdNumber);
+
+        startActivity(i);
+    }
+
     public void SendData(View view) throws JSONException {
 //        fetch data of all fields. then send json to server.
         String url = "http://agni.iitd.ernet.in/cop290/assign0/register/";
@@ -158,6 +194,39 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         Volley.newRequestQueue(this).add(stringRequest);
+
+        Intent i = new Intent(this, FinalScreen.class);
+
+        final EditText Name_Team = (EditText) findViewById(R.id.TeamText);
+        String TeamName = Name_Team.getText().toString();
+        i.putExtra("TeamName", TeamName);
+
+        final EditText Name1 = (EditText) findViewById(R.id.Name1);
+        String FirstName = Name1.getText().toString();
+        i.putExtra("FirstName", FirstName);
+
+        final EditText Name2 = (EditText) findViewById(R.id.Name2);
+        String SecondName = Name2.getText().toString();
+        i.putExtra("SecondName", SecondName);
+
+        final EditText Name3 = (EditText) findViewById(R.id.Name3);
+        String ThirdName = Name3.getText().toString();
+        i.putExtra("ThirdName", ThirdName);
+
+        final EditText Number1 = (EditText) findViewById(R.id.Entry1);
+        String FirstNumber = Number1.getText().toString();
+        i.putExtra("FirstNumber", FirstNumber);
+
+        final EditText Number2 = (EditText) findViewById(R.id.Entry2);
+        String SecondNumber = Number2.getText().toString();
+        i.putExtra("SecondNumber", SecondNumber);
+
+        final EditText Number3 = (EditText) findViewById(R.id.Entry3);
+        String ThirdNumber = Number3.getText().toString();
+        i.putExtra("ThirdNumber", ThirdNumber);
+
+        startActivity(i);
+
     }
     @Override
     public void onStart() {

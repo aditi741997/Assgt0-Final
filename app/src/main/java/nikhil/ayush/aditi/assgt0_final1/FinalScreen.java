@@ -6,24 +6,60 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
+import android.content.Intent;
+import android.app.Activity;
+import android.widget.ImageView;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
-public class FinalScreen extends AppCompatActivity {
+
+public class FinalScreen extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_screen);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
+        
+        Bundle registrationData = getIntent().getExtras();
+        if(registrationData == null){
+            return;
+        }
+
+        String TeamName = registrationData.getString("TeamName");
+        final TextView Team  = (TextView) findViewById(R.id.TeamName);
+        Team.setText(TeamName);
+
+        String FirstName = registrationData.getString("FirstName");
+        final TextView Name_1  = (TextView) findViewById(R.id.Name_1);
+        Name_1.setText(FirstName);
+
+        String SecondName = registrationData.getString("SecondName");
+        final TextView Name_2  = (TextView) findViewById(R.id.Name_2);
+        Name_2.setText(SecondName);
+
+        String ThirdName = registrationData.getString("ThirdName");
+        final TextView Name_3  = (TextView) findViewById(R.id.Name_3);
+        Name_3.setText(ThirdName);
+
+        String FirstNumber = registrationData.getString("FirstNumber");
+        final TextView Entry_1  = (TextView) findViewById(R.id.Entry1);
+        Entry_1.setText(FirstNumber);
+
+        String SecondNumber = registrationData.getString("SecondNumber");
+        final TextView Entry_2  = (TextView) findViewById(R.id.Entry2);
+        Entry_2.setText(SecondNumber);
+
+        String ThirdNumber = registrationData.getString("ThirdNumber");
+        final TextView Entry_3  = (TextView) findViewById(R.id.Entry3);
+        Entry_3.setText(ThirdNumber);
+
     }
 
+    public void Register(View view){
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
+    }
 }

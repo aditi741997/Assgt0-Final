@@ -19,4 +19,5 @@
     <string name="Button_Text">Register Again</string>
     <string name="teamreg">Team Registration</string>
     <string name="font">sans-serif-medium</string>
+    <string name="question">Do you want to register another team?</string>
 </resources>
