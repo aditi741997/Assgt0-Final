@@ -91,7 +91,10 @@ public class MainActivity extends AppCompatActivity {
         EditText entry = (EditText) findViewById(R.id.Name3);
         Button add=(Button) findViewById(R.id.add);
         Button sub=(Button) findViewById(R.id.sub);
-
+        TextView addMember=(TextView) findViewById(R.id.addmember);
+        addMember.setVisibility(View.INVISIBLE);
+        TextView Member3=(TextView) findViewById(R.id.textView3);
+        Member3.setVisibility(View.VISIBLE);
         Name.setVisibility(View.VISIBLE);
         entry.setVisibility(View.VISIBLE);
         sub.setVisibility(View.VISIBLE);
@@ -106,7 +109,10 @@ public class MainActivity extends AppCompatActivity {
         EditText entry = (EditText) findViewById(R.id.Name3);
         Button add=(Button) findViewById(R.id.add);
         Button sub=(Button) findViewById(R.id.sub);
-
+        TextView addMember=(TextView) findViewById(R.id.addmember);
+        addMember.setVisibility(View.VISIBLE);
+        TextView Member3=(TextView) findViewById(R.id.textView3);
+        Member3.setVisibility(View.INVISIBLE);
         //name_3.setVisibility(View.INVISIBLE);
         //entry3.setVisibility(View.INVISIBLE);
         Name.setVisibility(View.INVISIBLE);
@@ -145,22 +151,23 @@ public class MainActivity extends AppCompatActivity {
             Name3.setText("");Entry3.setText("");
         }
         if(!checker.teamname(teamname.getText().toString()))
-        {
+        {   message.setVisibility(View.VISIBLE);
             Log.i("this",teamname.getText().toString());
             message.setText("TeamName should contain only Albhabets");
         }
         else if(!((checker.NAME(Name1.getText().toString()))&&(checker.NAME(Name1.getText().toString()))&&(checker.NAME(Name1.getText().toString()))))
-        {
+        {   message.setVisibility(View.VISIBLE);
             Log.i("this",Name1.getText().toString());
             message.setText("Enter a valid name");
         }
         else if(!((checker.EntryNo(Entry1.getText().toString()))&&checker.EntryNo(Entry2.getText().toString())&&checker.EntryNo(Entry3.getText().toString())))
         { Log.i("this",Entry1.getText().toString());
+            message.setVisibility(View.VISIBLE);
             message.setText("Enter a valid Entry Number");}
 
         //        Request.Method.POST :
         else if(!checker.Diff_EntryNo(Entry1.getText().toString(),Entry2.getText().toString(),Entry3.getText().toString(),b))
-        {
+        {   message.setVisibility(View.VISIBLE);
             message.setText("All Entry no. should be different");
         }
         else{
