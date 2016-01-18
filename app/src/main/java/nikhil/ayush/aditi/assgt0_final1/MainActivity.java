@@ -86,15 +86,12 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void Add(View view)
-    {  TextView name_3=(TextView) findViewById(R.id.name3);
-        TextView entry3=(TextView) findViewById(R.id.entry3);
+    {
         EditText Name = (EditText) findViewById(R.id.Entry3);
         EditText entry = (EditText) findViewById(R.id.Name3);
         Button add=(Button) findViewById(R.id.add);
         Button sub=(Button) findViewById(R.id.sub);
 
-        name_3.setVisibility(View.VISIBLE);
-        entry3.setVisibility(View.VISIBLE);
         Name.setVisibility(View.VISIBLE);
         entry.setVisibility(View.VISIBLE);
         sub.setVisibility(View.VISIBLE);
@@ -103,15 +100,15 @@ public class MainActivity extends AppCompatActivity {
 //        sub.setChecked(false);
     }
     public void sub(View view)
-    {   TextView name_3=(TextView) findViewById(R.id.name3);
-        TextView entry3=(TextView) findViewById(R.id.entry3);
+    {   //TextView name_3=(TextView) findViewById(R.id.name3);
+        //TextView entry3=(TextView) findViewById(R.id.entry3);
         EditText Name = (EditText) findViewById(R.id.Entry3);
         EditText entry = (EditText) findViewById(R.id.Name3);
         Button add=(Button) findViewById(R.id.add);
         Button sub=(Button) findViewById(R.id.sub);
 
-        name_3.setVisibility(View.INVISIBLE);
-        entry3.setVisibility(View.INVISIBLE);
+        //name_3.setVisibility(View.INVISIBLE);
+        //entry3.setVisibility(View.INVISIBLE);
         Name.setVisibility(View.INVISIBLE);
         entry.setVisibility(View.INVISIBLE);
         sub.setVisibility(View.INVISIBLE);
@@ -122,12 +119,12 @@ public class MainActivity extends AppCompatActivity {
 //        fetch data of all fields. then send json to server.
         String url = "http://agni.iitd.ernet.in/cop290/assign0/register/";
         //EditText teamname = (EditText) findViewById(R.id.Name1);
-        TextView name_1=(TextView) findViewById(R.id.name1);
-        TextView entry1=(TextView) findViewById(R.id.entry1);
-        TextView name_2=(TextView) findViewById(R.id.name2);
-        TextView entry2=(TextView) findViewById(R.id.entry2);
-        TextView name_3=(TextView) findViewById(R.id.name3);
-        TextView entry3=(TextView) findViewById(R.id.entry3);
+       // TextView name_1=(TextView) findViewById(R.id.name1);
+       // TextView entry1=(TextView) findViewById(R.id.entry1);
+       // TextView name_2=(TextView) findViewById(R.id.name2);
+       // TextView entry2=(TextView) findViewById(R.id.entry2);
+       // TextView name_3=(TextView) findViewById(R.id.name3);
+        //TextView entry3=(TextView) findViewById(R.id.entry3);
         EditText Name1 = (EditText) findViewById(R.id.Name1);
         EditText Entry1 = (EditText) findViewById(R.id.Entry1);
 

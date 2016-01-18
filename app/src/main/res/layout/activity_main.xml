@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:background="@drawable/gradient1">
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,21 +20,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/j"
-        android:id="@+id/cop"
-        android:fontFamily="@string/font"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+    android:background="@drawable/grdient2">
 
-        android:layout_marginTop="50dp"
-
-        android:textColorHighlight="#c10e0e"
-        android:textColor="#c01414" />
 
 
     <TextView
@@ -46,173 +33,17 @@
         android:fontFamily="@string/font"
         android:layout_below="@+id/cop"
         android:layout_centerHorizontal="true"
-        android:textColor="#173293" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Name 1"
-        android:id="@+id/name1"
-        android:fontFamily="@string/font"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/Name_Team"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="#456423" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Entry No. 1"
-        android:id="@+id/entry1"
-        android:fontFamily="@string/font"
-        android:layout_below="@+id/name1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
-        android:textColor="#456423" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Name 2"
-        android:id="@+id/name2"
-        android:fontFamily="@string/font"
-        android:layout_below="@+id/entry1"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="28dp"
-        android:textColor="#456423" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Entry No. 2"
-        android:id="@+id/entry2"
-        android:fontFamily="@string/font"
-        android:layout_below="@+id/name2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
-        android:textColor="#456423" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Entry1"
-        android:layout_marginBottom="-10dp"
-        android:layout_alignBottom="@id/entry1"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@id/App_name"
-        android:layout_marginLeft="0dp"
-
-        android:padding="3dp"
-        android:ellipsize="start"
-        android:gravity="center"
-        android:hint="TeamName"
-        android:inputType="text"
-        android:textSize="20dp"
-        android:background="@drawable/edittextstyle" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Name1"
-        android:layout_marginBottom="-10dp"
-        android:layout_alignBottom="@id/name1"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@id/App_name"
-        android:layout_marginLeft="0dp"
-        android:padding="3dp"
-        android:ellipsize="start"
-        android:gravity="center"
-        android:hint="Name1"
-        android:inputType="text"
-        android:textSize="20dp"
-        android:background="@drawable/edittextstyle"
-        />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Name2"
-        android:layout_marginBottom="-10dp"
-        android:layout_alignBottom="@id/name2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@id/App_name"
-        android:layout_marginLeft="0dp"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Entry2"
-        android:layout_marginBottom="-10dp"
-        android:layout_alignBottom="@id/entry2"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@id/App_name"
-        android:layout_marginLeft="0dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Name 3"
-        android:id="@+id/name3"
-        android:fontFamily="@string/font"
-        android:layout_below="@+id/entry2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="28dp"
-        android:visibility="invisible"
-        android:textColor="#456423" />
+        android:textColor="#f9f9f9"
+        android:textSize="25dp" />
 
 
-    <EditText
-        android:visibility="invisible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Name3"
-        android:layout_marginBottom="-10dp"
-        android:layout_alignBottom="@id/name3"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@id/App_name"
-        android:layout_marginLeft="0dp" />
-
-    <TextView
-        android:visibility="invisible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Entry No. 3"
-        android:fontFamily="@string/font"
-        android:id="@+id/entry3"
-        android:layout_below="@+id/name3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
-        android:textColor="#456423" />
 
 
-    <EditText
-        android:visibility="invisible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Entry3"
-        android:layout_marginBottom="-10dp"
-        android:layout_alignBottom="@id/entry3"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@id/App_name"
-        android:layout_marginLeft="0dp" />
+
+
+
+
+
 
     <Button
         android:layout_width="wrap_content"
@@ -220,9 +51,11 @@
         android:text="Register the team"
         android:id="@+id/submit"
         android:onClick="SendData"
-        android:layout_alignTop="@+id/sub"
-        android:layout_alignLeft="@+id/Entry3"
-        android:layout_alignStart="@+id/Entry3" />
+
+
+        android:layout_below="@+id/Entry3"
+       android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -232,28 +65,30 @@
         android:id="@+id/msg"
         android:fontFamily="sans-serif-light"
         android:textColor="#456423"
-        android:layout_below="@+id/submit"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/submit"
+        android:layout_centerHorizontal="true"
+        />
 
     <Button
         android:text="+"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
 
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:background="@drawable/buttonshape"
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
         android:id="@+id/add"
-        android:layout_below="@+id/entry2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp"
         android:onClick="Add"
-        android:visibility="visible"/>
+        android:visibility="visible"
+
+       android:layout_below="@+id/Entry2"
+
+
+        android:layout_marginBottom="149dp" />
 
  
     <!--<RadioButton-->
@@ -284,44 +119,143 @@
         android:shadowRadius="5"
         android:onClick="sub"
         android:visibility="invisible"
-        android:layout_below="@+id/Entry3"
-        android:layout_alignRight="@+id/name3"
-        android:layout_alignEnd="@+id/name3"
-        android:layout_marginTop="15dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Team Name"
-        android:id="@+id/Name_Team"
-        android:fontFamily="@string/font"
-        android:layout_marginTop="35dp"
-        android:layout_below="@+id/App_name"
+        android:layout_above="@+id/add"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textColor="#456423" />
+        android:layout_marginBottom="122dp" />
 
     <EditText
 
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
 
         android:layout_height="wrap_content"
         android:id="@+id/TeamText"
-        android:layout_marginBottom="-10dp"
-        android:layout_alignBottom="@id/Name_Team"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignLeft="@id/App_name"
 
-        android:layout_marginLeft="10dp"
         android:padding="3dp"
         android:ellipsize="start"
         android:gravity="center"
         android:hint="TeamName"
         android:inputType="text"
         android:textSize="20dp"
-        android:background="@drawable/edittextstyle" />
+        android:background="@drawable/edittextstyle"
+
+        android:layout_below="@+id/App_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:textColor="#ffffff" />
+
+    <EditText
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:id="@+id/Name1"
+
+        android:padding="3dp"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:hint="NAME"
+        android:inputType="text"
+        android:textSize="15dp"
+        android:background="@drawable/edittextstyle"
+
+        android:layout_below="@+id/TeamText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp" />
+    <EditText
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:id="@+id/Entry1"
+
+        android:padding="3dp"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:hint="Entry Number"
+        android:inputType="text"
+        android:textSize="15dp"
+        android:background="@drawable/edittextstyle"
+
+        android:layout_below="@+id/Name1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+    <EditText
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:id="@+id/Name2"
+
+        android:padding="3dp"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:hint="NAME"
+        android:inputType="text"
+        android:textSize="15dp"
+        android:background="@drawable/edittextstyle"
+
+        android:layout_below="@+id/Entry1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp" />
+    <EditText
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:id="@+id/Entry2"
+
+        android:padding="3dp"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:hint="Entry Number"
+        android:inputType="text"
+        android:textSize="15dp"
+        android:background="@drawable/edittextstyle"
+
+        android:layout_below="@+id/Name2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+    <EditText
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:id="@+id/Name3"
+
+        android:padding="3dp"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:hint="NAME"
+        android:inputType="text"
+        android:textSize="15dp"
+        android:background="@drawable/edittextstyle"
+
+        android:layout_below="@+id/Entry2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"/>
+    <EditText
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:id="@+id/Entry3"
+
+        android:padding="3dp"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:hint="Entry Number"
+        android:inputType="text"
+        android:textSize="15dp"
+        android:background="@drawable/edittextstyle"
+
+        android:layout_below="@+id/Name3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Member 1"
+        android:id="@+id/textView"
+        android:layout_below="@+id/TeamText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
 
     <!--<RadioButton-->
         <!--android:visibility="invisible"-->
