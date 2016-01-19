@@ -6,9 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-
     tools:context="nikhil.ayush.aditi.assgt0_final1.MainActivity"
     android:background="#ffffff">
 
