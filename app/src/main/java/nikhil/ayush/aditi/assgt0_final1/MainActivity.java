@@ -270,24 +270,26 @@ public class MainActivity extends AppCompatActivity {
 //        fetch data of all fields. then send json to server.
         String url = "http://agni.iitd.ernet.in/cop290/assign0/register/";
         //EditText teamname = (EditText) findViewById(R.id.Name1);
-       // TextView name_1=(TextView) findViewById(R.id.name1);
-       // TextView entry1=(TextView) findViewById(R.id.entry1);
-       // TextView name_2=(TextView) findViewById(R.id.name2);
-       // TextView entry2=(TextView) findViewById(R.id.entry2);
-       // TextView name_3=(TextView) findViewById(R.id.name3);
+        // TextView name_1=(TextView) findViewById(R.id.name1);
+        // TextView entry1=(TextView) findViewById(R.id.entry1);
+        // TextView name_2=(TextView) findViewById(R.id.name2);
+        // TextView entry2=(TextView) findViewById(R.id.entry2);
+        // TextView name_3=(TextView) findViewById(R.id.name3);
         //TextView entry3=(TextView) findViewById(R.id.entry3);
-        EditText Name1 = (EditText) findViewById(R.id.Name1);
-        EditText Entry1 = (EditText) findViewById(R.id.Entry1);
+        final EditText Name1 = (EditText) findViewById(R.id.Name1);
+        final EditText Entry1 = (EditText) findViewById(R.id.Entry1);
 
-        EditText Name2 = (EditText) findViewById(R.id.Name2);
-        EditText Entry2 = (EditText) findViewById(R.id.Entry2);
-        EditText Name3 = (EditText) findViewById(R.id.Name3);
-        EditText Entry3 = (EditText) findViewById(R.id.Entry3);
+        final EditText Name2 = (EditText) findViewById(R.id.Name2);
+        final EditText Entry2 = (EditText) findViewById(R.id.Entry2);
+        final EditText Name3 = (EditText) findViewById(R.id.Name3);
+        final EditText Entry3 = (EditText) findViewById(R.id.Entry3);
         Button add=(Button) findViewById(R.id.add);
         Button sub=(Button) findViewById(R.id.sub);
         boolean b=(add.getVisibility()==View.VISIBLE);
-        EditText teamname = (EditText) findViewById(R.id.Name1);
+        final EditText teamname = (EditText) findViewById(R.id.TeamText);
         final TextView message=(TextView) findViewById(R.id.msg);
+        final Intent i=new Intent(this,FinalScreen.class);
+
 
         Check_constraints checker=new Check_constraints();
 
@@ -320,27 +322,63 @@ public class MainActivity extends AppCompatActivity {
             message.setText("All Entry no. should be different");
             pop();
         }
-        else{
+        else{b=false;
             StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
-                            Toast.makeText(MainActivity.this, response, Toast.LENGTH_LONG).show();
-                            TextView tt = (TextView) findViewById(R.id.msg);
                             String str=response.toString();
-                       /* if(str.equals())
-                        {
-                            message.setText("Team Not Registered : Team name already exists");
-                        }
-                        else if(str.equals())
-                        {//use of intents to start a new screen
+                            String success="{\"RESPONSE_SUCCESS\": 1, \"RESPONSE_MESSAGE\": \"Registration completed\"}";
+                            Log.i("yo",str);
+                            String Already_reg="{\"RESPONSE_SUCCESS\": 0, \"RESPONSE_MESSAGE\": \"User already registered\"}";
+                            String data_not_posted="{\"RESPONSE_SUCCESS\": 0, \"RESPONSE_MESSAGE\": \"Data not posted!\"}";
+                            Toast.makeText(MainActivity.this, str, Toast.LENGTH_LONG).show();
+                            if(str.equals(success))
+                            {String TeamName = teamname.getText().toString();
+                                i.putExtra("TeamName", TeamName);
 
-                        }*/
-                            tt.setText(response.toString() + " is the response from the server.");
+
+                                String FirstName = Name1.getText().toString();
+                                i.putExtra("FirstName", FirstName);
+
+                                String SecondName = Name2.getText().toString();
+                                i.putExtra("SecondName", SecondName);
+
+                                String ThirdName = Name3.getText().toString();
+                                i.putExtra("ThirdName", ThirdName);
+
+                                String FirstNumber = Entry1.getText().toString();
+                                i.putExtra("FirstNumber", FirstNumber);
+
+                                String SecondNumber = Entry2.getText().toString();
+                                i.putExtra("SecondNumber", SecondNumber);
+
+                                String ThirdNumber = Entry3.getText().toString();
+                                i.putExtra("ThirdNumber", ThirdNumber);
+
+                                startActivity(i);
+
+
+                            }
+                            //Toast.makeText(MainActivity.this, response, Toast.LENGTH_LONG).show();
+
+
+                            else if(str.equals(Already_reg))
+                            {   message.setVisibility(View.VISIBLE);
+                                message.setText("TeamName already registered");
+                            }
+
+                            else
+                            {   message.setVisibility(View.VISIBLE);
+                                message.setText("Data not posted!! Check your Net connection and try again");
+
+                            }
+                            //   tt.setText(response.toString() + " is the response from the server.");
 
                         }
                     },
-                    new Response.ErrorListener() {
+                    new Response.ErrorListener()
+                    {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
@@ -348,63 +386,36 @@ public class MainActivity extends AppCompatActivity {
                     }) {
                 @Override
                 protected Map<String, String> getParams()
-                { EditText Name1 = (EditText) findViewById(R.id.Name1);
+                {  /* EditText TeamName=(EditText) findViewById(R.id.TeamText);
+
+                    EditText Name1 = (EditText) findViewById(R.id.Name1);
                     EditText Entry1 = (EditText) findViewById(R.id.Entry1);
 
                     EditText Name2 = (EditText) findViewById(R.id.Name2);
                     EditText Entry2 = (EditText) findViewById(R.id.Entry2);
 
                     EditText Name3 = (EditText) findViewById(R.id.Name3);
-                    EditText Entry3 = (EditText) findViewById(R.id.Entry3);
+                    EditText Entry3 = (EditText) findViewById(R.id.Entry3);*/
 
 //                params to be sent
 
-                Map<String, String> params = new HashMap<String, String>();
-                params.put("teamname", "blah");
-                params.put("entry1", "blah2");
-                params.put("name1", "abc");
-                params.put("entry2", "def");
-                params.put("name2", "ab");
-                params.put("entry3", "bn");
-                params.put("name3", "nb");
-                return params;
-            }
-        };
-        Volley.newRequestQueue(this).add(stringRequest);
+                    Map<String, String> params = new HashMap<String, String>();
+                    params.put("teamname", teamname.getText().toString());
+                    params.put("entry1", Entry1.getText().toString());
+                    params.put("name1", Name1.getText().toString());
+                    params.put("entry2", Entry2.getText().toString());
+                    params.put("name2", Name2.getText().toString());
+                    params.put("entry3", Entry3.getText().toString());
+                    params.put("name3", Name3.getText().toString());
+                    return params;
+                }
+            };
+            Volley.newRequestQueue(this).add(stringRequest);
 
-        Intent i = new Intent(this, FinalScreen.class);
 
-        final EditText Name_Team = (EditText) findViewById(R.id.TeamText);
-        String TeamName = Name_Team.getText().toString();
-        i.putExtra("TeamName", TeamName);
 
-        //final EditText Namee1 = (EditText) findViewById(R.id.Name1);
-        String FirstName = Name1.getText().toString();
-        i.putExtra("FirstName", FirstName);
+        }}
 
-       // final EditText Name2 = (EditText) findViewById(R.id.Name2);
-        String SecondName = Name2.getText().toString();
-        i.putExtra("SecondName", SecondName);
-
-        //final EditText Name3 = (EditText) findViewById(R.id.Name3);
-        String ThirdName = Name3.getText().toString();
-        i.putExtra("ThirdName", ThirdName);
-
-        //final EditText Number1 = (EditText) findViewById(R.id.Entry1);
-        String FirstNumber = Entry1.getText().toString();
-        i.putExtra("FirstNumber", FirstNumber);
-
-        //final EditText Number2 = (EditText) findViewById(R.id.Entry2);
-        String SecondNumber = Entry2.getText().toString();
-        i.putExtra("SecondNumber", SecondNumber);
-
-        //final EditText Number3 = (EditText) findViewById(R.id.Entry3);
-        String ThirdNumber = Entry3.getText().toString();
-        i.putExtra("ThirdNumber", ThirdNumber);
-
-        startActivity(i);
-
-    }}
 
     @Override
     public void onStart() {
