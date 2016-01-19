@@ -14,7 +14,7 @@ public class MyFirstAnimation extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_my_first_animation);
     }
 
     public void clockwise(View view){

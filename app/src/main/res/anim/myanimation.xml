@@ -2,24 +2,26 @@
 <set xmlns:android="http://schemas.android.com/apk/res/android">
 
     <scale xmlns:android="http://schemas.android.com/apk/res/android"
-        android:fromXScale="0.5"
-        android:toXScale="3.0"
-        android:fromYScale="0.5"
-        android:toYScale="3.0"
-        android:duration="5000"
+        android:startOffset="400"
+        android:fromXScale="0.8"
+        android:toXScale="1.2"
+        android:fromYScale="0.8"
+        android:toYScale="1.2"
+        android:duration="600"
         android:pivotX="50%"
         android:pivotY="50%" >
     </scale>
 
     <scale xmlns:android="http://schemas.android.com/apk/res/android"
-        android:startOffset="5000"
-        android:fromXScale="3.0"
-        android:toXScale="0.5"
-        android:fromYScale="3.0"
-        android:toYScale="0.5"
-        android:duration="5000"
+        android:startOffset="1000"
+        android:fromXScale="1.2"
+        android:toXScale="0.8"
+        android:fromYScale="1.2"
+        android:toYScale="0.8"
+        android:duration="600"
         android:pivotX="50%"
         android:pivotY="50%" >
     </scale>
+
 
 </set>

@@ -31,7 +31,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
 
-        android:layout_marginTop="65dp"
+
+        android:layout_marginTop="50dp"
+
 
         android:textColorHighlight="#c10e0e"
         android:textColor="#c01414" />
@@ -190,6 +192,8 @@
 
     <EditText
         android:visibility="invisible"
+
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Entry3"
@@ -200,6 +204,7 @@
         android:layout_alignLeft="@id/App_name"
         android:layout_marginLeft="0dp" />
 
+
     <Button
         android:text="Register Team"
         android:textColor="#FFFFFF"
@@ -209,10 +214,16 @@
         android:layout_height="35dp"
         android:background="@drawable/buttonshape2"
         android:id="@+id/submit"
+
         android:layout_below="@+id/entry3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:onClick="SendRegistration"/>
+
+
+        android:onClick="SendData"
+        android:layout_alignTop="@+id/sub"
+        android:layout_alignLeft="@+id/Entry3"
+        android:layout_alignStart="@+id/Entry3" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -221,18 +232,23 @@
         android:text="Message"
         android:id="@+id/msg"
         android:fontFamily="sans-serif-light"
+
         android:layout_below="@+id/submit"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:textColor="#456423" />
+
+        android:textColor="#456423"
+        android:layout_below="@+id/submit"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="+"
         android:textColor="#456423"
         android:textSize="30sp"
 
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:background="@drawable/buttonshape"
         android:shadowColor="#456423"
         android:shadowDx="0"
@@ -265,15 +281,15 @@
         android:text="X"
         android:textColor="#C20202"
         android:textSize="20sp"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:background="@drawable/buttonshape3"
         android:shadowColor="#A8A8A8"
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
         android:onClick="sub"
-        android:visibility="visible"
+        android:visibility="invisible"
         android:layout_below="@+id/entry2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -301,7 +317,11 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignLeft="@id/App_name"
+
         android:layout_marginLeft="20dp"/>
+
+        android:layout_marginLeft="10dp"/>
+
 
     <!--<RadioButton-->
         <!--android:visibility="invisible"-->

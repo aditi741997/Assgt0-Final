@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.content.Intent;
 import android.app.Activity;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
@@ -56,10 +56,21 @@ public class FinalScreen extends Activity {
         final TextView Entry_3  = (TextView) findViewById(R.id.Entry3);
         Entry_3.setText(ThirdNumber);
 
+        clockwise();
     }
 
     public void Register(View view){
+
+        //Intent i = new Intent(this, MyFirstAnimation.class);
+
         Intent i = new Intent(this, MyFirstAnimation.class);
         startActivity(i);
     }
+
+    public void clockwise(){
+        TextView image = (TextView)findViewById(R.id.CongratsText);
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.myanimation);
+        image.startAnimation(animation);
+    }
+
 }

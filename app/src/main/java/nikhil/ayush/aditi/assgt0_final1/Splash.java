@@ -9,6 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 public class Splash extends AppCompatActivity {
     private final int splash_time = 3000;
@@ -28,6 +31,9 @@ public class Splash extends AppCompatActivity {
 //                        .setAction("Action", null).show();
 //            }
 //        });
+        clockwise();
+//        slide();
+
         new Handler().postDelayed(new Runnable()
         {
             @Override
@@ -40,4 +46,15 @@ public class Splash extends AppCompatActivity {
         }, splash_time);
     }
 
+    public void clockwise(){
+        ImageView image = (ImageView)findViewById(R.id.image);
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.myanimation);
+        image.startAnimation(animation);
+    }
+
+//    public void slide(){
+//        ImageView image = (ImageView)findViewById(R.id.block);
+//        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide);
+//        image.startAnimation(animation1);
+//    }
 }
