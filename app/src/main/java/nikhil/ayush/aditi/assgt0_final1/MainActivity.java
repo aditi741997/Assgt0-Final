@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
         //      Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        setSupportActionBar(toolbar);
 
@@ -95,15 +95,15 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void Add(View view)
-    {  TextView name_3=(TextView) findViewById(R.id.name3);
-        TextView entry3=(TextView) findViewById(R.id.entry3);
+    {
         EditText Name = (EditText) findViewById(R.id.Entry3);
         EditText entry = (EditText) findViewById(R.id.Name3);
         Button add=(Button) findViewById(R.id.add);
         Button sub=(Button) findViewById(R.id.sub);
-
-        name_3.setVisibility(View.VISIBLE);
-        entry3.setVisibility(View.VISIBLE);
+        TextView addMember=(TextView) findViewById(R.id.addmember);
+        addMember.setVisibility(View.INVISIBLE);
+        TextView Member3=(TextView) findViewById(R.id.textView3);
+        Member3.setVisibility(View.VISIBLE);
         Name.setVisibility(View.VISIBLE);
         entry.setVisibility(View.VISIBLE);
         sub.setVisibility(View.VISIBLE);
@@ -130,15 +130,18 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
     public void sub(View view)
-    {   TextView name_3=(TextView) findViewById(R.id.name3);
-        TextView entry3=(TextView) findViewById(R.id.entry3);
+    {   //TextView name_3=(TextView) findViewById(R.id.name3);
+        //TextView entry3=(TextView) findViewById(R.id.entry3);
         EditText Name = (EditText) findViewById(R.id.Entry3);
         EditText entry = (EditText) findViewById(R.id.Name3);
         Button add=(Button) findViewById(R.id.add);
         Button sub=(Button) findViewById(R.id.sub);
-
-        name_3.setVisibility(View.INVISIBLE);
-        entry3.setVisibility(View.INVISIBLE);
+        TextView addMember=(TextView) findViewById(R.id.addmember);
+        addMember.setVisibility(View.VISIBLE);
+        TextView Member3=(TextView) findViewById(R.id.textView3);
+        Member3.setVisibility(View.INVISIBLE);
+        //name_3.setVisibility(View.INVISIBLE);
+        //entry3.setVisibility(View.INVISIBLE);
         Name.setVisibility(View.INVISIBLE);
         entry.setVisibility(View.INVISIBLE);
         sub.setVisibility(View.INVISIBLE);
@@ -185,12 +188,12 @@ public class MainActivity extends AppCompatActivity {
 //        fetch data of all fields. then send json to server.
         String url = "http://agni.iitd.ernet.in/cop290/assign0/register/";
         //EditText teamname = (EditText) findViewById(R.id.Name1);
-        TextView name_1=(TextView) findViewById(R.id.name1);
-        TextView entry1=(TextView) findViewById(R.id.entry1);
-        TextView name_2=(TextView) findViewById(R.id.name2);
-        TextView entry2=(TextView) findViewById(R.id.entry2);
-        TextView name_3=(TextView) findViewById(R.id.name3);
-        TextView entry3=(TextView) findViewById(R.id.entry3);
+       // TextView name_1=(TextView) findViewById(R.id.name1);
+       // TextView entry1=(TextView) findViewById(R.id.entry1);
+       // TextView name_2=(TextView) findViewById(R.id.name2);
+       // TextView entry2=(TextView) findViewById(R.id.entry2);
+       // TextView name_3=(TextView) findViewById(R.id.name3);
+        //TextView entry3=(TextView) findViewById(R.id.entry3);
         EditText Name1 = (EditText) findViewById(R.id.Name1);
         EditText Entry1 = (EditText) findViewById(R.id.Entry1);
 
@@ -211,22 +214,23 @@ public class MainActivity extends AppCompatActivity {
             Name3.setText("");Entry3.setText("");
         }
         if(!checker.teamname(teamname.getText().toString()))
-        {
+        {   message.setVisibility(View.VISIBLE);
             Log.i("this",teamname.getText().toString());
             message.setText("TeamName should contain only Albhabets");
         }
         else if(!((checker.NAME(Name1.getText().toString()))&&(checker.NAME(Name1.getText().toString()))&&(checker.NAME(Name1.getText().toString()))))
-        {
+        {   message.setVisibility(View.VISIBLE);
             Log.i("this",Name1.getText().toString());
             message.setText("Enter a valid name");
         }
         else if(!((checker.EntryNo(Entry1.getText().toString(),false))&&checker.EntryNo(Entry2.getText().toString(),false)&&checker.EntryNo(Entry3.getText().toString(),b)))
         { Log.i("this",Entry1.getText().toString());
+            message.setVisibility(View.VISIBLE);
             message.setText("Enter a valid Entry Number");}
 
         //        Request.Method.POST :
         else if(!checker.Diff_EntryNo(Entry1.getText().toString(),Entry2.getText().toString(),Entry3.getText().toString(),b))
-        {
+        {   message.setVisibility(View.VISIBLE);
             message.setText("All Entry no. should be different");
         }
         else{
