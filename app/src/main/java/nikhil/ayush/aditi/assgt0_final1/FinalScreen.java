@@ -1,5 +1,6 @@
 package nikhil.ayush.aditi.assgt0_final1;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,6 +16,8 @@ import android.widget.Button;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import org.w3c.dom.Text;
+
 
 public class FinalScreen extends Activity {
 
@@ -26,6 +29,13 @@ public class FinalScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_screen);
 
+//        Typeface face = Typeface.createFromAsset(getAssets(),"ENGROSS.TTF");
+//        TextView  congo= (TextView)findViewById(R.id.CongratsText);
+//        TextView regsuc = (TextView)findViewById(R.id.context);
+//        TextView teamname = (TextView)findViewById(R.id.yourteam);
+//        congo.setTypeface(face);
+//        regsuc.setTypeface(face);
+//        teamname.setTypeface(face);
 
         
         Bundle registrationData = getIntent().getExtras();
@@ -36,6 +46,7 @@ public class FinalScreen extends Activity {
         String TeamName = registrationData.getString("TeamName");
         final TextView Team  = (TextView) findViewById(R.id.TeamName);
         Team.setText(TeamName);
+//        Team.setTypeface(face);
 
         String FirstName = registrationData.getString("FirstName");
         final TextView Name_1  = (TextView) findViewById(R.id.Name_1);

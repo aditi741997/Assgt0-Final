@@ -39,7 +39,7 @@ public class Splash extends AppCompatActivity {
 //            }
 //        });
 
-        Typeface face =Typeface.createFromAsset(getAssets(),"ENGROSS.TTF");
+        Typeface face =Typeface.createFromAsset(getAssets(),"ELPHIN.TTF");
         TextView txtV = (TextView)findViewById(R.id.Text);
         txtV.setTypeface(face);
         clockwise();

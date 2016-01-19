@@ -29,25 +29,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="32sp"
         android:text="@string/Message"
         android:id="@+id/CongratsText"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
+        android:fontFamily="sans-serif"
         android:textColor="#c72f1e" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="24sp"
         android:text="@string/YourTeam"
         android:id="@+id/yourteam"
         android:layout_marginTop="30dp"
         android:textStyle="bold"
         android:layout_below="@+id/context"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="155dp"
+        android:layout_marginLeft="100dp"
         android:textColor="#2847ac" />
 
     <TextView
@@ -56,9 +59,10 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/TeamName"
         android:id="@+id/TeamName"
+        android:textSize="24sp"
         android:layout_alignTop="@+id/yourteam"
         android:layout_toRightOf="@id/yourteam"
-        android:layout_marginLeft="24dp"
+        android:layout_marginLeft="72dp"
         android:textColor="#7c8a05" />
 
     <TextView
@@ -67,6 +71,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/Content"
         android:id="@+id/context"
+        android:textSize="26sp"
         android:layout_marginTop="30dp"
         android:layout_below="@+id/CongratsText"
         android:layout_centerHorizontal="true"
@@ -78,9 +83,10 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/Username"
         android:id="@+id/Names"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:layout_below="@+id/yourteam"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:layout_alignLeft="@+id/yourteam"
         android:layout_alignStart="@+id/yourteam"
         android:textColor="#23571c" />
@@ -92,9 +98,10 @@
         android:text="@string/EntryNo"
         android:id="@+id/entry"
         android:textStyle="bold"
+        android:textSize="24sp"
         android:layout_alignTop="@+id/Names"
         android:layout_toRightOf="@id/Names"
-        android:layout_marginLeft="60dp"
+        android:layout_marginLeft="120dp"
         android:textColor="#23571c"
         android:password="false"
         android:phoneNumber="false" />
@@ -105,6 +112,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/Name1"
         android:id="@+id/Name_1"
+        android:textSize="22sp"
         android:layout_below="@+id/Names"
         android:layout_alignLeft="@+id/Names"
         android:layout_alignStart="@+id/Names"
@@ -117,6 +125,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/Name2"
         android:id="@+id/Name_2"
+        android:textSize="22sp"
         android:layout_below="@+id/Name_1"
         android:layout_alignLeft="@+id/Name_1"
         android:layout_alignStart="@+id/Name_1"
@@ -129,6 +138,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/Name3"
         android:id="@+id/Name_3"
+        android:textSize="22sp"
         android:layout_marginTop="24dp"
         android:layout_below="@+id/Name_2"
         android:layout_alignLeft="@+id/Name_2"
@@ -141,6 +151,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/No1"
         android:id="@+id/Entry1"
+        android:textSize="22sp"
         android:layout_alignTop="@+id/Name_1"
         android:layout_alignLeft="@+id/entry"
         android:layout_alignStart="@+id/entry"
@@ -152,6 +163,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/No2"
         android:id="@+id/Entry2"
+        android:textSize="22sp"
         android:layout_alignTop="@+id/Name_2"
         android:layout_alignLeft="@+id/Entry1"
         android:layout_alignStart="@+id/Entry1"
@@ -163,6 +175,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/No3"
         android:id="@+id/Entry3"
+        android:textSize="22sp"
         android:layout_alignBottom="@+id/Name_3"
         android:layout_alignLeft="@+id/Entry2"
         android:layout_alignStart="@+id/Entry2"
@@ -170,15 +183,15 @@
 
     <Button
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="20sp"
 
-        android:layout_width="205dp"
+        android:layout_width="256dp"
         android:layout_height="35dp"
         android:background="@drawable/buttonshape2"
         android:text="@string/Button_Text"
         android:id="@+id/button"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="440dp"
         android:layout_centerHorizontal="true"
         android:onClick="Register" />
 
@@ -189,7 +202,7 @@
         android:text="@string/question"
         android:id="@+id/SmallText"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="455dp"
+        android:layout_marginTop="500dp"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
