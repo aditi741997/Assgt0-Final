@@ -100,10 +100,18 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_Instructions) {
             return true;
         }
+        else if(id==R.id.action_aboutus)
+        {Toast.makeText(MainActivity.this,"App has been made by Ayush,Nikhil,Aditi",Toast.LENGTH_LONG).show();
+            return true;
+        }
+        else if(id==R.id.action_aboutapp)
+        {Toast.makeText(MainActivity.this,"App allows the user to register their team on the server",Toast.LENGTH_LONG).show();
+            return true;
 
+        }
         return super.onOptionsItemSelected(item);
     }
     public void Add(View view)
