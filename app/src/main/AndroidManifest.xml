@@ -37,6 +37,7 @@
             android:name=".FinalScreen"
             android:label="@string/title_activity_final_screen"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".MyFirstAnimation"
             android:label="@string/title_activity_my_first_animation"
