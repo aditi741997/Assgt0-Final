@@ -9,15 +9,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.graphics.Typeface;
+import android.widget.TextView;
 
 public class Splash extends AppCompatActivity {
     private final int splash_time = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 //        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -31,7 +38,12 @@ public class Splash extends AppCompatActivity {
 //                        .setAction("Action", null).show();
 //            }
 //        });
+
+        Typeface face =Typeface.createFromAsset(getAssets(),"ENGROSS.TTF");
+        TextView txtV = (TextView)findViewById(R.id.Text);
+        txtV.setTypeface(face);
         clockwise();
+
 //        slide();
 
         new Handler().postDelayed(new Runnable()
