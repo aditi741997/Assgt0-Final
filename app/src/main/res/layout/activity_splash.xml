@@ -32,12 +32,14 @@
         <!--android:src="@android:drawable/ic_dialog_email" />-->
 
     <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:src="@drawable/check"
+        android:layout_width="170dp"
+        android:layout_height="130dp"
+        android:src="@drawable/bluetick"
         android:clickable="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_above="@+id/Text"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/image" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,9 +49,28 @@
         android:id="@+id/Text"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="151dp"
+        android:layout_marginBottom="130dp"
         android:textStyle="bold|italic"
         android:textSize="@dimen/abc_alert_dialog_button_bar_height"
         android:textColor="#e2f4fa" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/rediitd"
+        android:id="@+id/iitd"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp" />
+
+    <!--<ImageView-->
+        <!--android:layout_width="180dp"-->
+        <!--android:layout_height="190dp"-->
+        <!--android:id="@+id/block"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignLeft="@+id/image"-->
+        <!--android:layout_alignStart="@+id/image"-->
+        <!--android:background="#5DA9F5"/>-->
+
 
 </RelativeLayout>

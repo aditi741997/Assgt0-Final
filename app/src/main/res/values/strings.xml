@@ -16,7 +16,12 @@
     <string name="No1">EntryNo.1</string>
     <string name="No2">EntryNo.2</string>
     <string name="No3">EntryNo.3</string>
-    <string name="Button_Text">Register Again</string>
+    <string name="Button_Text">Register Another Team</string>
     <string name="teamreg">Team Registration</string>
     <string name="font">sans-serif-medium</string>
+    <string name="question">Do you want to register another team?</string>
+
+    <string name="title_activity_animation">Animation</string>
+    <string name="title_activity_my_first_animation">MyFirstAnimation</string>
+
 </resources>
