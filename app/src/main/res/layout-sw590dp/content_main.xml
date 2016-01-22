@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/gradient1">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="nikhil.ayush.aditi.assgt0_final1.MainActivity"
+
+        android:background="@drawable/gradient1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:id="@+id/mainlayout">
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/teamreg"
+                android:id="@+id/App_name"
+                android:fontFamily="@string/font"
+                android:layout_below="@+id/cop"
+                android:layout_centerHorizontal="true"
+                android:textColor="#FFFFFF"
+                android:textSize="35dp"
+                android:layout_marginTop="36dp"
+                android:textIsSelectable="false" />
+
+
+
+
+            <Button
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:text="Register the team"
+                android:textSize="22dp"
+                android:id="@+id/submit"
+                android:onClick="SendData"
+                android:background="@drawable/buttonshape2"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/Entry3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Message"
+                android:id="@+id/msg"
+                android:fontFamily="sans-serif"
+                android:textColor="#FFEF85"
+                android:textSize="18dp"
+                android:layout_below="@+id/submit"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold|normal|italic"
+                android:background="@null"
+                android:visibility="invisible"
+                android:padding="3dp" />
+
+            <Button
+                android:text="+"
+                android:textColor="#5FA346"
+                android:textSize="44sp"
+
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/buttonshape"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:id="@+id/add"
+                android:onClick="Add"
+                android:visibility="visible"
+
+                android:layout_below="@+id/Entry2"
+                android:layout_marginTop="22dp"
+
+                android:layout_marginBottom="200dp" />
+
+            <Button
+                android:id="@+id/sub"
+
+                android:text="-"
+                android:textColor="#C20202"
+                android:textSize="44sp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/buttonshape3"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:onClick="sub"
+                android:visibility="invisible"
+
+                android:layout_below="@+id/Entry2"
+                android:layout_marginTop="22dp"
+
+                android:layout_marginBottom="200dp"
+                />
+
+            <EditText
+
+                android:layout_width="match_parent"
+
+                android:layout_height="42dp"
+                android:id="@+id/TeamText"
+
+                android:padding="3dp"
+                android:ellipsize="start"
+                android:gravity="center"
+                android:hint="TeamName"
+                android:inputType="text"
+                android:textSize="24dp"
+                android:background="@drawable/edittextstyle"
+
+                android:layout_below="@+id/App_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#f7f7f7"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+
+                android:layout_height="40dp"
+                android:id="@+id/Name1"
+
+                android:padding="3dp"
+                android:ellipsize="start"
+                android:gravity="center"
+                android:hint="NAME"
+                android:inputType="text"
+                android:textSize="20dp"
+                android:background="@drawable/edittextstyle"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_below="@+id/TeamText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="85dp" />
+            <EditText
+                android:layout_width="match_parent"
+
+                android:layout_height="40dp"
+                android:id="@+id/Entry1"
+
+                android:padding="3dp"
+                android:ellipsize="start"
+                android:gravity="center"
+                android:hint="Entry Number"
+                android:inputType="text"
+                android:textSize="20dp"
+                android:background="@drawable/edittextstyle"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_below="@+id/Name1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"/>
+            <EditText
+                android:layout_width="match_parent"
+
+                android:layout_height="40dp"
+                android:id="@+id/Name2"
+
+                android:padding="3dp"
+                android:ellipsize="start"
+                android:gravity="center"
+                android:hint="NAME"
+                android:inputType="text"
+                android:textSize="20dp"
+                android:background="@drawable/edittextstyle"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_below="@+id/Entry1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp" />
+            <EditText
+                android:layout_width="match_parent"
+
+                android:layout_height="40dp"
+                android:id="@+id/Entry2"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:padding="3dp"
+                android:ellipsize="start"
+                android:gravity="center"
+                android:hint="Entry Number"
+                android:inputType="text"
+                android:textSize="20dp"
+                android:background="@drawable/edittextstyle"
+
+                android:layout_below="@+id/Name2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"/>
+            <EditText
+                android:layout_width="match_parent"
+
+                android:layout_height="40dp"
+                android:id="@+id/Name3"
+
+                android:padding="3dp"
+                android:ellipsize="start"
+                android:gravity="center"
+                android:hint="NAME"
+                android:inputType="text"
+                android:textSize="20dp"
+                android:background="@drawable/edittextstyle"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_below="@+id/Entry2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:visibility="invisible" />
+            <EditText
+                android:layout_width="match_parent"
+
+                android:layout_height="40dp"
+                android:id="@+id/Entry3"
+
+                android:padding="3dp"
+                android:ellipsize="start"
+                android:gravity="center"
+                android:hint="Entry Number"
+                android:inputType="text"
+                android:textSize="20dp"
+                android:background="@drawable/edittextstyle"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:layout_below="@+id/Name3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:visibility="invisible"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Member 1"
+                android:textSize="26dp"
+                android:id="@+id/textView"
+                android:layout_below="@+id/TeamText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|normal|italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26dp"
+                android:text="Member 2"
+                android:id="@+id/textView2"
+                android:layout_below="@+id/Entry1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|normal|italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Member 3"
+                android:textSize="26dp"
+                android:id="@+id/textView3"
+                android:layout_below="@+id/Entry2"
+                android:layout_alignLeft="@+id/textView"
+                android:layout_alignStart="@+id/textView"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold|normal|italic"
+                android:layout_marginTop="35dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Add another member"
+                android:id="@+id/addmember"
+                android:textSize="22dp"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/add"
+                android:layout_marginLeft="62dp"
+                android:layout_below="@+id/Entry2"
+                android:layout_marginTop="30dp"
+                android:textColor="#f7f7f7"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+            <!--<RadioButton-->
+            <!--android:visibility="invisible"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Only two members  "-->
+            <!--android:id="@+id/sub"-->
+            <!--android:layout_alignTop="@+id/add"-->
+            <!--android:layout_toLeftOf="@+id/msg"-->
+            <!--android:layout_toStartOf="@+id/msg"-->
+            <!--android:onClick="sub"-->
+            <!--android:checked="false" />-->
+
+        </RelativeLayout>
+
+    </ScrollView>
+</android.support.v4.widget.DrawerLayout>
