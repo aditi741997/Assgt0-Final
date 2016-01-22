@@ -52,34 +52,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    //Edit it
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    private GoogleApiClient client;
-//    RequestQueue Rq = Volley.newRequestQueue(this);
 
+    private GoogleApiClient client;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);            //For the App to be full screen when on Main Actiovity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);         //Toolbar is initialised/instantiated here
         setSupportActionBar(toolbar);
-        //      Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -99,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        //Based on ID it executes the following if else if statement and pops out the response
         if (id == R.id.action_Instructions) {
             return true;
         }
@@ -114,15 +97,17 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    public void Add(View view)
+    public void Add(View view)      //OnClick method for the + button to add third member
     {
         EditText Name = (EditText) findViewById(R.id.Entry3);
         EditText entry = (EditText) findViewById(R.id.Name3);
         Button add=(Button) findViewById(R.id.add);
         Button sub=(Button) findViewById(R.id.sub);
         TextView addMember=(TextView) findViewById(R.id.addmember);
-        addMember.setVisibility(View.INVISIBLE);
         TextView Member3=(TextView) findViewById(R.id.textView3);
+
+//      Changes the visibilty of the following objects. Itself disappears and - button appears.Along with it the input text fields for third member start appearing
+        addMember.setVisibility(View.INVISIBLE);
         Member3.setVisibility(View.VISIBLE);
         Name.setVisibility(View.VISIBLE);
         entry.setVisibility(View.VISIBLE);
@@ -132,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 //        sub.setChecked(false);
  //       movebutton();
         //zoom();
-        fade();
+        fade();  // Called to show fade animation for appearing and disappearing members
         //moveViewToScreenCenter();
 
     }
@@ -143,9 +128,13 @@ public class MainActivity extends AppCompatActivity {
         EditText image = (EditText)findViewById(R.id.Name3);
         EditText image2 = (EditText)findViewById(R.id.Entry3);
         TextView image6 = (TextView)findViewById(R.id.addmember);
+
+        //Different animation are called form xml files in anim folder
+
         Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade);
         Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade2);
         Animation animation3 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadeout);
+
         image.startAnimation(animation2);
         image2.startAnimation(animation2);
         image3.startAnimation(animation2);
@@ -218,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
 //        PlusButton.setLayoutParams(sizeRules);
 //    }
 
-    public void sub(View view)
+    public void sub(View view)  //OnClick method for the - button to remove third member
     {   //TextView name_3=(TextView) findViewById(R.id.name3);
         //TextView entry3=(TextView) findViewById(R.id.entry3);
         EditText Name = (EditText) findViewById(R.id.Entry3);
@@ -226,8 +215,11 @@ public class MainActivity extends AppCompatActivity {
         Button add=(Button) findViewById(R.id.add);
         Button sub=(Button) findViewById(R.id.sub);
         TextView addMember=(TextView) findViewById(R.id.addmember);
-        addMember.setVisibility(View.VISIBLE);
         TextView Member3=(TextView) findViewById(R.id.textView3);
+
+//      Changes the visibilty of the following objects. Itself disappears and + button appears.Along with it the input text fields for third member too disappear
+
+        addMember.setVisibility(View.VISIBLE);
         Member3.setVisibility(View.INVISIBLE);
         //name_3.setVisibility(View.INVISIBLE);
         //entry3.setVisibility(View.INVISIBLE);
