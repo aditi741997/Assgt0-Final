@@ -9,20 +9,24 @@ import static java.lang.Character.isDigit;
 public class Check_constraints
 {
     public boolean teamname(String teamname)
-    {  for(int i=0;i<teamname.length();i++)
-    {if(!isAlphabetic(teamname.charAt(i)))
-    {return false;
-    }
+    {  if(teamname.length()==0)
+        return false;
+        for(int i=0;i<teamname.length();i++)
+        {if(!isAlphabetic(teamname.charAt(i)))
+        {return false;
+        }
 
-    }
+        }
         return true;
     }
     public boolean NAME(String name)
-    {for(int i=0;i<name.length();i++)
-    {if(!isAlphabetic(name.charAt(i)))
-    {return false;
-    }
-    }
+    {if(name.length()==0)
+        return false;
+        for(int i=0;i<name.length();i++)
+        {if(!isAlphabetic(name.charAt(i)))
+        {return false;
+        }
+        }
         return true;
     }
     public boolean EntryNo(String entryno,boolean b)
@@ -32,7 +36,7 @@ public class Check_constraints
         int l=entryno.length();
         if(l!=11)
             return false;
-        if(entryno.charAt(0)!='2'||entryno.charAt(1)!='0'||entryno.charAt(2)!='1')
+        if(entryno.charAt(0)!='2'||entryno.charAt(1)!='0')
             return false;
         if(!isAlphabetic(entryno.charAt(4))&&!isAlphabetic(entryno.charAt(5)))
             return false;
