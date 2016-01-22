@@ -104,7 +104,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void Add(View view)
     {
-//        HANDLES THE ONCLICK EVENT OF Add BUTTON
+        /**
+         * Handles OnClick event of + Button **/
         EditText Name = (EditText) findViewById(R.id.Entry3);
         EditText entry = (EditText) findViewById(R.id.Name3);
         Button add=(Button) findViewById(R.id.add);
@@ -122,7 +123,10 @@ public class MainActivity extends AppCompatActivity {
         fade();
 
     }
-    public void fade(){
+    public void fade()
+    {
+        /**
+         * Animation **/
         Button image4 = (Button)findViewById(R.id.add);
         Button image5 = (Button)findViewById(R.id.sub);
         TextView image3 = (TextView)findViewById(R.id.textView3);
@@ -143,6 +147,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void pop()
     {
+        /**
+         * Animation **/
         TextView image3 = (TextView)findViewById(R.id.msg);
         Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadeinout);
         image3.startAnimation(animation1);
@@ -150,6 +156,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void fadeout()
     {
+        /**
+         * Animation **/
         Button image5 = (Button)findViewById(R.id.sub);
         TextView image3 = (TextView)findViewById(R.id.textView3);
         EditText image = (EditText)findViewById(R.id.Name3);
@@ -169,13 +177,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void zoom()
     {
+        /**
+         * Animation **/
         Button image = (Button)findViewById(R.id.add);
         Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.clockwise);
         image.startAnimation(animation1);
     }
 
     private void moveViewToScreenCenter()
-    {   Button view = (Button)findViewById(R.id.add);
+    {
+        /**
+         * Animation **/
+        Button view = (Button)findViewById(R.id.add);
         RelativeLayout root = (RelativeLayout) findViewById( R.id.mainlayout);
         DisplayMetrics dm = new DisplayMetrics();
         this.getWindowManager().getDefaultDisplay().getMetrics( dm );
@@ -211,6 +224,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void sub(View view)
     {
+        /**
+         * Handles OnClick event of - Button **/
         EditText Name = (EditText) findViewById(R.id.Entry3);
         EditText entry = (EditText) findViewById(R.id.Name3);
         Button add=(Button) findViewById(R.id.add);
@@ -229,9 +244,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void SendData(View view) throws JSONException {
-//        fetch data of all fields. then send json to server.
-//        this method uses the VOLLEY module and
-//        Check_constraints class used to check user input
+/**        fetches data of all fields. then send json to server.
+*        this method uses the VOLLEY module and
+*        Check_constraints class used to check user input **/
         String url = "http://agni.iitd.ernet.in/cop290/assign0/register/";
         final EditText Name1 = (EditText) findViewById(R.id.Name1);
         final EditText Entry1 = (EditText) findViewById(R.id.Entry1);

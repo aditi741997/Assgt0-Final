@@ -10,7 +10,8 @@ import com.android.volley.toolbox.Volley;
  */
 public class AppGlobal extends Application
 {
-//    THIS CLASS HAS BEEN MADE TO MAKE A GLOBAL REQUEST QUEUE, RATHER THAN CREATING A NEW QUEUE WITH EACH ACTIVITY INITIALIZATION.
+    /**
+     * Constructed TO MAKE A GLOBAL REQUEST QUEUE, RATHER THAN CREATING A NEW QUEUE WITH EACH ACTIVITY INITIALIZATION. **/
     private static RequestQueue GlobalQueue;
     @Override
     public void onCreate()
@@ -21,6 +22,7 @@ public class AppGlobal extends Application
 
     public RequestQueue getQueue()
     {
+        /** returns the global queue object **/
         return  GlobalQueue;
     }
 
