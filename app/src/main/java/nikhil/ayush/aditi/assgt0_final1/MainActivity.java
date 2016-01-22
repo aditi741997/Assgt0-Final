@@ -58,28 +58,16 @@ public class MainActivity extends AppCompatActivity {
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     private GoogleApiClient client;
-//    RequestQueue Rq = Volley.newRequestQueue(this);
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
+//        THIS IS TO MAKE THE ACTIVITY FULL SCREEN.
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        //      Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -116,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void Add(View view)
     {
+//        HANDLES THE ONCLICK EVENT OF Add BUTTON
         EditText Name = (EditText) findViewById(R.id.Entry3);
         EditText entry = (EditText) findViewById(R.id.Name3);
         Button add=(Button) findViewById(R.id.add);
@@ -128,12 +117,9 @@ public class MainActivity extends AppCompatActivity {
         entry.setVisibility(View.VISIBLE);
         sub.setVisibility(View.VISIBLE);
         add.setVisibility(View.INVISIBLE);
-//        add.setChecked(false);
-//        sub.setChecked(false);
- //       movebutton();
-        //zoom();
+
+//        fade() ANIMATES THE BUTTONS.
         fade();
-        //moveViewToScreenCenter();
 
     }
     public void fade(){
@@ -143,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
         EditText image = (EditText)findViewById(R.id.Name3);
         EditText image2 = (EditText)findViewById(R.id.Entry3);
         TextView image6 = (TextView)findViewById(R.id.addmember);
+
         Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade);
         Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade2);
         Animation animation3 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadeout);
@@ -154,19 +141,22 @@ public class MainActivity extends AppCompatActivity {
         image6.startAnimation(animation3);
     }
 
-    public void pop(){
+    public void pop()
+    {
         TextView image3 = (TextView)findViewById(R.id.msg);
         Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadeinout);
         image3.startAnimation(animation1);
     }
 
-    public void fadeout(){
+    public void fadeout()
+    {
         Button image5 = (Button)findViewById(R.id.sub);
         TextView image3 = (TextView)findViewById(R.id.textView3);
         EditText image = (EditText)findViewById(R.id.Name3);
         EditText image2 = (EditText)findViewById(R.id.Entry3);
         TextView image4 = (TextView)findViewById(R.id.addmember);
         Button image6 = (Button)findViewById(R.id.add);
+
         Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fadeout);
         Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade2);
         image.startAnimation(animation1);
@@ -177,7 +167,8 @@ public class MainActivity extends AppCompatActivity {
         image6.startAnimation(animation2);
     }
 
-    public void zoom(){
+    public void zoom()
+    {
         Button image = (Button)findViewById(R.id.add);
         Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.clockwise);
         image.startAnimation(animation1);
@@ -219,8 +210,7 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
     public void sub(View view)
-    {   //TextView name_3=(TextView) findViewById(R.id.name3);
-        //TextView entry3=(TextView) findViewById(R.id.entry3);
+    {
         EditText Name = (EditText) findViewById(R.id.Entry3);
         EditText entry = (EditText) findViewById(R.id.Name3);
         Button add=(Button) findViewById(R.id.add);
@@ -229,8 +219,6 @@ public class MainActivity extends AppCompatActivity {
         addMember.setVisibility(View.VISIBLE);
         TextView Member3=(TextView) findViewById(R.id.textView3);
         Member3.setVisibility(View.INVISIBLE);
-        //name_3.setVisibility(View.INVISIBLE);
-        //entry3.setVisibility(View.INVISIBLE);
         Name.setVisibility(View.INVISIBLE);
         entry.setVisibility(View.INVISIBLE);
         sub.setVisibility(View.INVISIBLE);
@@ -239,51 +227,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /*public void SendRegistration(View view){
-
-        Intent i = new Intent(this, FinalScreen.class);
-
-        final EditText Name_Team = (EditText) findViewById(R.id.TeamText);
-        String TeamName = Name_Team.getText().toString();
-        i.putExtra("TeamName", TeamName);
-
-        final EditText Name1 = (EditText) findViewById(R.id.Name1);
-        String FirstName = Name1.getText().toString();
-        i.putExtra("FirstName", FirstName);
-
-        final EditText Name2 = (EditText) findViewById(R.id.Name2);
-        String SecondName = Name2.getText().toString();
-        i.putExtra("SecondName", SecondName);
-
-        final EditText Name3 = (EditText) findViewById(R.id.Name3);
-        String ThirdName = Name3.getText().toString();
-        i.putExtra("ThirdName", ThirdName);
-
-        final EditText Number1 = (EditText) findViewById(R.id.Entry1);
-        String FirstNumber = Number1.getText().toString();
-        i.putExtra("FirstNumber", FirstNumber);
-
-        final EditText Number2 = (EditText) findViewById(R.id.Entry2);
-        String SecondNumber = Number2.getText().toString();
-        i.putExtra("SecondNumber", SecondNumber);
-
-        final EditText Number3 = (EditText) findViewById(R.id.Entry3);
-        String ThirdNumber = Number3.getText().toString();
-        i.putExtra("ThirdNumber", ThirdNumber);
-
-        startActivity(i);
-    }*/
 
     public void SendData(View view) throws JSONException {
 //        fetch data of all fields. then send json to server.
+//        this method uses the VOLLEY module and
+//        Check_constraints class used to check user input
         String url = "http://agni.iitd.ernet.in/cop290/assign0/register/";
-        //EditText teamname = (EditText) findViewById(R.id.Name1);
-        // TextView name_1=(TextView) findViewById(R.id.name1);
-        // TextView entry1=(TextView) findViewById(R.id.entry1);
-        // TextView name_2=(TextView) findViewById(R.id.name2);
-        // TextView entry2=(TextView) findViewById(R.id.entry2);
-        // TextView name_3=(TextView) findViewById(R.id.name3);
-        //TextView entry3=(TextView) findViewById(R.id.entry3);
         final EditText Name1 = (EditText) findViewById(R.id.Name1);
         final EditText Entry1 = (EditText) findViewById(R.id.Entry1);
 
@@ -394,17 +343,7 @@ public class MainActivity extends AppCompatActivity {
                     }) {
                 @Override
                 protected Map<String, String> getParams()
-                {  /* EditText TeamName=(EditText) findViewById(R.id.TeamText);
-
-                    EditText Name1 = (EditText) findViewById(R.id.Name1);
-                    EditText Entry1 = (EditText) findViewById(R.id.Entry1);
-
-                    EditText Name2 = (EditText) findViewById(R.id.Name2);
-                    EditText Entry2 = (EditText) findViewById(R.id.Entry2);
-
-                    EditText Name3 = (EditText) findViewById(R.id.Name3);
-                    EditText Entry3 = (EditText) findViewById(R.id.Entry3);*/
-
+                {
 //                params to be sent
 
                     Map<String, String> params = new HashMap<String, String>();
@@ -418,10 +357,9 @@ public class MainActivity extends AppCompatActivity {
                     return params;
                 }
             };
-            Volley.newRequestQueue(this).add(stringRequest);
-
-
-
+            AppGlobal myapp = (AppGlobal)getApplicationContext();
+            RequestQueue addtoQueue = myapp.getQueue();
+            addtoQueue.add(stringRequest);
         }}
 
 
