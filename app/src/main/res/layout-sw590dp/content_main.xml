@@ -136,7 +136,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="32dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#f7f7f7"
+                android:textColor="#000000"
                 android:textStyle="bold"
                 />
 

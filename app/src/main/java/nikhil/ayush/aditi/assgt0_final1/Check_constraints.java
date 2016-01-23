@@ -10,19 +10,21 @@ import static java.lang.Character.isDigit;
  */
 public class Check_constraints
 {
-    public boolean teamname(String teamname)// Checks if the teamName is not an empty String
-    {  if(teamname.length()==0)
+    public boolean teamname(String teamname)
+    {  /** Checks if the teamName is not an empty String **/
+        if(teamname.length()==0)
         return false;
-        for(int i=0;i<teamname.length();i++)
-        {if(!isAlphabetic(teamname.charAt(i)))
-        {return false;
-        }
-
-        }
+//        for(int i=0;i<teamname.length();i++)
+//        {if(!isAlphabetic(teamname.charAt(i)))
+//        {return false;
+//        }
+//
+//        }
         return true;
     }
-    public boolean NAME(String name)        //Checks for validity of name. Name should have only only alphabets
-    {if(name.length()==0)
+    public boolean NAME(String name)
+    {   /** Checks for validity of name. Name should have only only alphabets **/
+        if(name.length()==0)
         return false;
         for(int i=0;i<name.length();i++)
         {if(!isAlphabetic(name.charAt(i)))
@@ -31,8 +33,9 @@ public class Check_constraints
         }
         return true;
     }
-    public boolean EntryNo(String entryno,boolean b)   //Checks for Validity of Entry Number.Entry no. should be in IIT Delhi format.eg 2014cs10201
-    {   if(b)
+    public boolean EntryNo(String entryno,boolean b)
+    {   /** Checks for Validity of Entry Number. Entry no. should be in IIT Delhi format.eg 2014cs10201 **/
+        if(b)
         return true;
 
         int l=entryno.length();
@@ -49,8 +52,9 @@ public class Check_constraints
         }
         return true;
     }
-    public boolean Diff_EntryNo(String entry1,String entry2,String entry3,boolean b)//Checks if the all the Entry No entered are different
-    {if(b) {
+    public boolean Diff_EntryNo(String entry1,String entry2,String entry3,boolean b)
+    {/** Checks if the all the Entry No entered are different **/
+        if(b) {
         if (entry1.equals(entry2) || entry1.equals(entry3) || entry2.equals(entry3))
             return false;
     }

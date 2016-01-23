@@ -144,12 +144,11 @@
                 android:inputType="text"
                 android:textSize="20dp"
                 android:background="@drawable/edittextstyle"
-
                 android:layout_below="@+id/App_name"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#f7f7f7"
+                android:textColor="#000000"
                 android:textStyle="bold"
                 />
 

@@ -11,19 +11,16 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.Window;
 import android.view.WindowManager;
-
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import android.content.Intent;
 import android.view.MotionEvent;
 import android.view.ViewGroup;
@@ -31,8 +28,6 @@ import android.widget.RelativeLayout;
 import android.util.DisplayMetrics;
 import android.view.animation.TranslateAnimation;
 import android.graphics.drawable.TransitionDrawable;
-
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -44,10 +39,8 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -61,15 +54,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-//        THIS IS TO MAKE THE ACTIVITY FULL SCREEN.
+//      HIS IS TO MAKE THE ACTIVITY FULL SCREEN.
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
@@ -82,11 +73,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        /**Handle action bar item clicks here. The action bar will
+        * automatically handle clicks on the Home/Up button, so long
+        * as you specify a parent activity in AndroidManifest.xml**/
 
+        int id = item.getItemId();
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_Instructions) {
             return true;
@@ -105,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
     public void Add(View view)
     {
         /**
-         * Handles OnClick event of + Button **/
+         * Handles OnClick event of + Button i.e Appearing of third member and - button along with its disappearance **/
         EditText Name = (EditText) findViewById(R.id.Entry3);
         EditText entry = (EditText) findViewById(R.id.Name3);
         Button add=(Button) findViewById(R.id.add);
@@ -246,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
     public void SendData(View view) throws JSONException {
 /**        fetches data of all fields. then send json to server.
 *        this method uses the VOLLEY module and
-*        Check_constraints class used to check user input **/
+*        Check_constraints class instance used to check validity of user input **/
         String url = "http://agni.iitd.ernet.in/cop290/assign0/register/";
         final EditText Name1 = (EditText) findViewById(R.id.Name1);
         final EditText Entry1 = (EditText) findViewById(R.id.Entry1);
@@ -262,7 +253,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView message=(TextView) findViewById(R.id.msg);
         final Intent i=new Intent(this,FinalScreen.class);
 
-
+/** Check_constraints objct created**/
         Check_constraints checker=new Check_constraints();
 
         if(b)
@@ -308,26 +299,19 @@ public class MainActivity extends AppCompatActivity {
                             if(str.equals(success))
                             {String TeamName = teamname.getText().toString();
                                 i.putExtra("TeamName", TeamName);
-
-
                                 String FirstName = Name1.getText().toString();
                                 i.putExtra("FirstName", FirstName);
-
                                 String SecondName = Name2.getText().toString();
                                 i.putExtra("SecondName", SecondName);
-
                                 String ThirdName = Name3.getText().toString();
                                 i.putExtra("ThirdName", ThirdName);
-
                                 String FirstNumber = Entry1.getText().toString();
                                 i.putExtra("FirstNumber", FirstNumber);
-
                                 String SecondNumber = Entry2.getText().toString();
                                 i.putExtra("SecondNumber", SecondNumber);
-
                                 String ThirdNumber = Entry3.getText().toString();
                                 i.putExtra("ThirdNumber", ThirdNumber);
-
+                            /** New activity is called to Start the final activity once data is posted on the net**/
                                 startActivity(i);
 
 
@@ -360,7 +344,7 @@ public class MainActivity extends AppCompatActivity {
                 protected Map<String, String> getParams()
                 {
 //                params to be sent
-
+                /** Data to be sent to the Server **/
                     Map<String, String> params = new HashMap<String, String>();
                     params.put("teamname", teamname.getText().toString());
                     params.put("entry1", Entry1.getText().toString());
@@ -381,9 +365,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
         client.connect();
         Action viewAction = Action.newAction(
                 Action.TYPE_VIEW, // TODO: choose an action type.
@@ -401,10 +382,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStop() {
         super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        Action viewAction = Action.newAction(
+                Action viewAction = Action.newAction(
                 Action.TYPE_VIEW, // TODO: choose an action type.
                 "Main Page", // TODO: Define a title for the content shown.
                 // TODO: If you have web page content that matches this app activity's content,

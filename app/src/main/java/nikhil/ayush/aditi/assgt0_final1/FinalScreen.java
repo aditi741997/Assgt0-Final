@@ -29,15 +29,6 @@ public class FinalScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_screen);
 
-//        Typeface face = Typeface.createFromAsset(getAssets(),"ENGROSS.TTF");
-//        TextView  congo= (TextView)findViewById(R.id.CongratsText);
-//        TextView regsuc = (TextView)findViewById(R.id.context);
-//        TextView teamname = (TextView)findViewById(R.id.yourteam);
-//        congo.setTypeface(face);
-//        regsuc.setTypeface(face);
-//        teamname.setTypeface(face);
-
-        
         Bundle registrationData = getIntent().getExtras();
         if(registrationData == null){
             return;
@@ -76,14 +67,13 @@ public class FinalScreen extends Activity {
     }
 
     public void Register(View view){
-
-        //Intent i = new Intent(this, MyFirstAnimation.class);
-
+    /** Onclick method for register another team option **/
         Intent i = new Intent(this, MyFirstAnimation.class);
         startActivity(i);
     }
 
     public void clockwise(){
+        /** Animation **/
         TextView image = (TextView)findViewById(R.id.CongratsText);
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.myanimation);
         image.startAnimation(animation);
