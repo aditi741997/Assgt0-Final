@@ -2,7 +2,7 @@
 
 \bibitem{animations}
 Adding animations.
-\newblock http://www.tutorialspoint.com/android/android_animations.htm.
+\newblock http://www.tutorialspoint.com/android/android\_animations.htm.
 
 \bibitem{figures_in_latex}
 Adding figures in latex.
@@ -19,11 +19,11 @@ Android volley tutorial.
   https://www.simplifiedcoding.net/android-volley-post-request-tutorial/.
 
 \bibitem{android_button_maker}
-Custom buttons & gradients.
+Custom buttons and gradients.
 \newblock http://angrytools.com/android/button/.
 
 \bibitem{multiple_screen_sizes}
-Supporting tab & phone view.
+Supporting tab and phone view.
 \newblock http://developer.android.com/training/multiscreen/screensizes.html.
 
 \end{thebibliography}
