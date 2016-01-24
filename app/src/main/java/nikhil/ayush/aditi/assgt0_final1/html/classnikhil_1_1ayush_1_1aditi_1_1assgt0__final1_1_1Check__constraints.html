@@ -99,8 +99,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ac0460d6e0aa346187142bcf4f37a94a4"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnikhil_1_1ayush_1_1aditi_1_1assgt0__final1_1_1Check__constraints.html#ac0460d6e0aa346187142bcf4f37a94a4">teamname</a> (String teamname)</td></tr>
 <tr class="separator:ac0460d6e0aa346187142bcf4f37a94a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba3507206a3ead59b71c764071edfa22"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnikhil_1_1ayush_1_1aditi_1_1assgt0__final1_1_1Check__constraints.html#aba3507206a3ead59b71c764071edfa22">NAME</a> (String name)</td></tr>
-<tr class="separator:aba3507206a3ead59b71c764071edfa22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4902541f6a169c3a9a9b86e91ab04ae"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnikhil_1_1ayush_1_1aditi_1_1assgt0__final1_1_1Check__constraints.html#ac4902541f6a169c3a9a9b86e91ab04ae">NAME</a> (String name, boolean b)</td></tr>
+<tr class="separator:ac4902541f6a169c3a9a9b86e91ab04ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9940f0cd05d303d462c7d27e5fa61acb"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnikhil_1_1ayush_1_1aditi_1_1assgt0__final1_1_1Check__constraints.html#a9940f0cd05d303d462c7d27e5fa61acb">EntryNo</a> (String entryno, boolean b)</td></tr>
 <tr class="separator:a9940f0cd05d303d462c7d27e5fa61acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab600d243dc01887b8b2d0f3dd1c7df68"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnikhil_1_1ayush_1_1aditi_1_1assgt0__final1_1_1Check__constraints.html#ab600d243dc01887b8b2d0f3dd1c7df68">Diff_EntryNo</a> (String entry1, String entry2, String entry3, boolean b)</td></tr>
@@ -152,6 +152,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Checks if the all the Entry No entered are different </p>
 
 </div>
 </div>
@@ -186,10 +187,11 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Checks for Validity of Entry Number. Entry no. should be in IIT Delhi format.eg 2014cs10201 </p>
 
 </div>
 </div>
-<a class="anchor" id="aba3507206a3ead59b71c764071edfa22"></a>
+<a class="anchor" id="ac4902541f6a169c3a9a9b86e91ab04ae"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -200,8 +202,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">boolean nikhil.ayush.aditi.assgt0_final1.Check_constraints.NAME </td>
           <td>(</td>
           <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -210,6 +222,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Checks for validity of name. Name should have only only alphabets </p>
 
 </div>
 </div>
@@ -234,6 +247,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Checks if the teamName is not an empty String </p>
 
 </div>
 </div>

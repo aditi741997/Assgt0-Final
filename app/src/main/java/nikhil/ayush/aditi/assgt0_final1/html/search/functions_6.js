@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getqueue',['getQueue',['../classnikhil_1_1ayush_1_1aditi_1_1assgt0__final1_1_1AppGlobal.html#a5ea66ebf6cb8734d3a29393c7d4b2943',1,'nikhil::ayush::aditi::assgt0_final1::AppGlobal']]]
+  ['moveviewtoscreencenter',['moveViewToScreenCenter',['../classnikhil_1_1ayush_1_1aditi_1_1assgt0__final1_1_1MainActivity.html#a350a77b310a3fb76f78ef7955e77a864',1,'nikhil::ayush::aditi::assgt0_final1::MainActivity']]]
 ];

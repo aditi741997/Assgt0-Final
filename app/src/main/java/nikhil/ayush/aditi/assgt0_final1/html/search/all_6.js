@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['getqueue',['getQueue',['../classnikhil_1_1ayush_1_1aditi_1_1assgt0__final1_1_1AppGlobal.html#a5ea66ebf6cb8734d3a29393c7d4b2943',1,'nikhil::ayush::aditi::assgt0_final1::AppGlobal']]],
-  ['globalqueue',['GlobalQueue',['../classnikhil_1_1ayush_1_1aditi_1_1assgt0__final1_1_1AppGlobal.html#ac334a96703aa12123d581ac421c38890',1,'nikhil::ayush::aditi::assgt0_final1::AppGlobal']]]
+  ['mainactivity',['MainActivity',['../classnikhil_1_1ayush_1_1aditi_1_1assgt0__final1_1_1MainActivity.html',1,'nikhil::ayush::aditi::assgt0_final1']]],
+  ['mainactivity_2ejava',['MainActivity.java',['../MainActivity_8java.html',1,'']]],
+  ['moveviewtoscreencenter',['moveViewToScreenCenter',['../classnikhil_1_1ayush_1_1aditi_1_1assgt0__final1_1_1MainActivity.html#a350a77b310a3fb76f78ef7955e77a864',1,'nikhil::ayush::aditi::assgt0_final1::MainActivity']]]
 ];
