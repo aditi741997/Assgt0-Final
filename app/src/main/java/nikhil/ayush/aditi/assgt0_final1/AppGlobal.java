@@ -6,7 +6,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
 /**
- * Created by jagdish on 1/22/2016.
+ * Created by aditi on 1/22/2016.
  */
 public class AppGlobal extends Application
 {
