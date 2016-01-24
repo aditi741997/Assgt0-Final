@@ -25,6 +25,7 @@
             android:id="@+id/mainlayout">
 
 
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -32,11 +33,11 @@
                 android:text="@string/teamreg"
                 android:id="@+id/App_name"
                 android:fontFamily="@string/font"
-                android:layout_below="@+id/cop"
+                android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:textColor="#FFFFFF"
                 android:textSize="25dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:textIsSelectable="false" />
 
 
@@ -50,19 +51,20 @@
                 android:textColor="#FFFFFF"
                 android:layout_below="@+id/Entry3"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="55dp" />
+                android:layout_marginTop="65dp" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Message"
+                android:text="@string/Message"
                 android:id="@+id/msg"
                 android:fontFamily="sans-serif-light"
                 android:textColor="#FFEF85"
                 android:layout_above="@+id/submit"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="-40dp"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="-50dp"
                 android:textStyle="bold|normal|italic"
                 android:background="@null"
                 android:visibility="invisible"
@@ -137,12 +139,13 @@
                 android:inputType="text"
                 android:textSize="20dp"
                 android:background="@drawable/edittextstyle"
-
                 android:layout_below="@+id/App_name"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"
+
                 android:textColor="#3b5998"
+
                 android:textStyle="bold"
                 />
 
@@ -164,7 +167,7 @@
                 android:textStyle="bold"
                 android:layout_below="@+id/TeamText"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="55dp" />
+                android:layout_marginTop="45dp" />
             <EditText
                 android:layout_width="match_parent"
 
@@ -274,7 +277,7 @@
                 android:id="@+id/textView"
                 android:layout_below="@+id/TeamText"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="15dp"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold|normal|italic" />
 

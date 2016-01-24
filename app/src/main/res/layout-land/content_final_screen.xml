@@ -47,7 +47,7 @@
         android:textStyle="bold"
         android:layout_below="@+id/context"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="165dp"
+        android:layout_marginLeft="155dp"
         android:textColor="#2847ac" />
 
     <TextView

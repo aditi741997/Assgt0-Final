@@ -22,24 +22,15 @@ public class Splash extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        /** Splash screen is the launcher activity which after starts the Main Activity **/
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
-        Typeface face =Typeface.createFromAsset(getAssets(),"ENGROSS.TTF");
+        Typeface face =Typeface.createFromAsset(getAssets(),"ELPHIN.TTF");
         TextView txtV = (TextView)findViewById(R.id.Text);
         txtV.setTypeface(face);
         clockwise();
@@ -59,14 +50,10 @@ public class Splash extends AppCompatActivity {
     }
 
     public void clockwise(){
+        /** Animation **/
         ImageView image = (ImageView)findViewById(R.id.image);
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.myanimation);
         image.startAnimation(animation);
     }
 
-//    public void slide(){
-//        ImageView image = (ImageView)findViewById(R.id.block);
-//        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide);
-//        image.startAnimation(animation1);
-//    }
 }
