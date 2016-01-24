@@ -1,5 +1,10 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
-I found no \citation commands---while reading file main.aux
-I found no \bibdata command---while reading file main.aux
-I found no \bibstyle command---while reading file main.aux
-(There were 3 error messages)
+The style file: abbrv.bst
+Database file #1: references.bib
+Warning--to sort, need author or key in multiple_screen_sizes
+Warning--to sort, need author or key in animations
+Warning--to sort, need author or key in android_button_maker
+Warning--to sort, need author or key in figures_in_latex
+Warning--to sort, need author or key in android_app_object
+Warning--to sort, need author or key in volley_post_request
+(There were 6 warnings)

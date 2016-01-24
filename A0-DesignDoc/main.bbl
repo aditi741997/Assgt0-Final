@@ -1,0 +1,29 @@
+\begin{thebibliography}{1}
+
+\bibitem{animations}
+Adding animations.
+\newblock http://www.tutorialspoint.com/android/android_animations.htm.
+
+\bibitem{figures_in_latex}
+Adding figures in latex.
+\newblock https://www.latex-tutorial.com/tutorials/beginners/latex-figures//.
+
+\bibitem{android_app_object}
+Android app object.
+\newblock
+  https://www.mobomo.com/2011/05/how-to-use-application-object-of-android/.
+
+\bibitem{volley_post_request}
+Android volley tutorial.
+\newblock
+  https://www.simplifiedcoding.net/android-volley-post-request-tutorial/.
+
+\bibitem{android_button_maker}
+Custom buttons & gradients.
+\newblock http://angrytools.com/android/button/.
+
+\bibitem{multiple_screen_sizes}
+Supporting tab & phone view.
+\newblock http://developer.android.com/training/multiscreen/screensizes.html.
+
+\end{thebibliography}

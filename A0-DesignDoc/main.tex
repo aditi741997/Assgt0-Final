@@ -21,14 +21,14 @@ As per the requirements of the assignment,
 \begin{itemize}
 \item Different classes have been defined in separate files to maintain modularity in code.
 \item Volley has been used to interact with the server.
-\item Different layouts have been made for tablet and mobile phone view.
+\item Different layouts~\cite{multiple_screen_sizes} have been made for tablet and mobile phone view for all the three activities.
 \item Various resources, such as strings, images and styles, have been included in separate files.
 \item \textbf{Doxygen} has been implemented to create an HTML documentation of the application structure.
 \end{itemize} 
 
 \section{User Interface}
 %\begin{itemize}
-\subsection{Splash Screen} The files activity\_splash.xml and content\_splash.xml define the layout of the splash screen. It consists of a big image that contains the logo and name of the application. The images for phone view and tab view have been included in drawable folder. An animation has been applied on the app logo to make it grow and shrink. Below is the screen shot of the splash screen.
+\subsection{Splash Screen} The files activity\_splash.xml and content\_splash.xml define the layout of the splash screen. It consists of a big image that contains the logo and name of the application. The images for phone view and tab view have been included in drawable folder. An animation~\cite{animations} has been applied on the app logo to make it grow and shrink. Below is the screen shot of the splash screen in tablet view. The layout for tab view is in layout-sw590dp folder.(This is picked when smallest width exceeds 590 dp)
 
 \begin{figure}[!ht]
 	\centering
@@ -41,14 +41,14 @@ As per the requirements of the assignment,
 \item The layout of main page has been defined by activity\_main.xml and content\_main.xml files in the layout folder. 
 \item For tab view, the layout files are in layout-sw590dp folder. The application automatically picks the layout file in this folder, as soon as the smallest width available to the app exceeds 590dp.
 \item The page consists of a total of five data fields, including team name and name \& entry numbers of team members to be filled in by the user to register his team.
-\item The '+' Button has been included which on clicking shows the data fields for the name and entry number of the third member of the team.
+\item The '+' Button~\cite{android_button_maker} has been included which on clicking shows the data fields for the name and entry number of the third member of the team.
 \item The '-' Button has been included which on clicking hides the data fields for the name and entry number of the third member of the team. It is visible only when the '+' button is clicked.
 \item The 'Register' Button handles the data entered on being clicked.
 \item A text block for displaying the server response and the appropriate message has been placed above the register button.
 
 \end{itemize} 
 
-\par\noindent The following are the screen shots of the main page on different orientations as well as screen sizes:
+\par\noindent The following are the screen shots of the main page on different orientations as well as screen sizes~\cite{figures_in_latex}:
 
 \begin{figure}
 	\centering
@@ -80,6 +80,9 @@ It appears when the correct data has been successfully posted on the server.It d
 \par\noindent A handler has been added to execute the method Run() of a runnable after the fixed time specified by a private variable, splash\_time.
 \par\noindent The Run() method creates a new Intent to start the main activity.
 
+\subsection{AppGlobal Class}
+\par\noindent This class~\cite{android_app_object} has been made to make an object of the application, so as to create a global request queue for the volley push requests. The same queue is used to add requests each time the user clicks the Register button on Main Page.
+
 \subsection{Check\_constraints Class}
 \par\noindent This class has been made separately, to perform all the required checks on the validity of the data entered by the user in the main page of the application. It includes the following methods:
 \begin{itemize}
@@ -95,7 +98,7 @@ It appears when the correct data has been successfully posted on the server.It d
 \begin{itemize}
 \item \textbf{Add} : This method handles the OnClick event of the '+' button on the main page. It changes the visibility of the name and entry number fields of the third member and the '-' button to Visible and its own visibility to Invisible.
 \item \textbf{sub} : This method handles the OnClick event of the '-' button. It changes the visibility of the fields for details of the third member back to invisible.'+' button appears again.
-\item \textbf{SendData} : This is method to handle the OnClick event of the 'Register' button. It first uses an instance of the Check\_constraints class explained above, to check if the data entered is valid. Then, it initializes a new StringRequest object, a class in the module \textsc{volley} to send the data to the server. The request is added to a new Request Queue.
+\item \textbf{SendData} : This is method to handle the OnClick event of the 'Register' button. It first uses an instance of the Check\_constraints class explained above, to check if the data entered is valid. Then, it initializes a new StringRequest object, a class in the module \textsc{volley} to send the data~\cite{volley_post_request} to the server. The request is added to a new Request Queue.
 OnResponse and Error Listners are also handled via this StringRequest instance.
 \item \textbf{fadein} : This method is used to implement an animation on certain text fields to slowly bring them into view.
 \item \textbf{fadeout} : This method is used to implement an animation on certain text fields to slowly fade them out of view.
@@ -166,8 +169,9 @@ OnResponse and Error Listners are also handled via this StringRequest instance.
 \par\noindent The source code of the project is maintained in the following repository:\\
 https://github.com/aditi741997/Assgt0-Final.git
 
-% \bibliographystyle{abbrv}
-% \bibliography{references}
+\bibliographystyle{abbrv}
+\medskip
+\bibliography{references}
 
 
 \end{document}
