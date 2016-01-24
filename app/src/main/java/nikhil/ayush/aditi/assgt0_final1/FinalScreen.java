@@ -68,7 +68,7 @@ public class FinalScreen extends Activity {
 
         //Intent i = new Intent(this, MyFirstAnimation.class);
 
-        Intent i = new Intent(this, MyFirstAnimation.class);
+        Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
     }
 

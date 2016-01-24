@@ -1,6 +1,7 @@
 package nikhil.ayush.aditi.assgt0_final1;
 
-import java.lang.String;import static java.lang.Character.isAlphabetic;
+import java.lang.String;
+import static java.lang.Character.isAlphabetic;
 import static java.lang.Character.isDigit;
 
 /**

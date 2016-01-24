@@ -11,6 +11,8 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="nikhil.ayush.aditi.assgt0_final1.FinalScreen"
+    android:background="#edf182">\
+        \
    >
 
 <RelativeLayout android:layout_width="match_parent"
