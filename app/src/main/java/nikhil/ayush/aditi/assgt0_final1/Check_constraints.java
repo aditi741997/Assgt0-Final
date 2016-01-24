@@ -32,18 +32,20 @@ public class Check_constraints
         if(b)
             return true;
         if(name.length()==0)
-        return false;
+            return false;
         for(int i=0;i<name.length();i++)
-        {if(!isAlphabetic(name.charAt(i))&& name.charAt(i)!=' ')
-        {return false;
-        }
+        {
+            if(!isAlphabetic(name.charAt(i))&& name.charAt(i)!=' ')
+                {
+                    return false;
+                }
         }
         return true;
     }
     public boolean EntryNo(String entryno,boolean b)
     {   /** Checks for Validity of Entry Number. Entry no. should be in IIT Delhi format.eg 2014cs10201 **/
         if(b)
-        return true;
+            return true;
 
         int l=entryno.length();
         if(l!=11)
