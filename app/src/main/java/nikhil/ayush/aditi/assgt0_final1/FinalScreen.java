@@ -63,7 +63,7 @@ public class FinalScreen extends Activity {
         final TextView Entry_3  = (TextView) findViewById(R.id.Entry3);
         Entry_3.setText(ThirdNumber);
 
-        clockwise();
+        grow();
     }
 
     public void Register(View view){
@@ -75,7 +75,7 @@ public class FinalScreen extends Activity {
         startActivity(i);
     }
 
-    public void clockwise(){
+    public void grow(){
         /** Animation **/
         TextView image = (TextView)findViewById(R.id.CongratsText);
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.myanimation);

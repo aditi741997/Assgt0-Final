@@ -109,10 +109,10 @@ public class MainActivity extends AppCompatActivity {
         add.setVisibility(View.INVISIBLE);
 
 //        fade() ANIMATES THE BUTTONS.
-        fade();
+        fadein();
 
     }
-    public void fade()
+    public void fadein()
     {
         /**
          * Animation **/
@@ -164,14 +164,6 @@ public class MainActivity extends AppCompatActivity {
         image6.startAnimation(animation2);
     }
 
-    public void zoom()
-    {
-        /**
-         * Animation **/
-        Button image = (Button)findViewById(R.id.add);
-        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.clockwise);
-        image.startAnimation(animation1);
-    }
 
     private void moveViewToScreenCenter()
     {
