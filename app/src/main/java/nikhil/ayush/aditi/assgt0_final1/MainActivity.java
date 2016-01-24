@@ -79,10 +79,8 @@ public class MainActivity extends AppCompatActivity {
 
         int id = item.getItemId();
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_Instructions) {
-            return true;
-        }
-        else if(id==R.id.action_aboutus)
+
+         if(id==R.id.action_aboutus)
         {Toast.makeText(MainActivity.this,"App has been made by Ayush,Nikhil,Aditi",Toast.LENGTH_LONG).show();
             return true;
         }
@@ -238,6 +236,9 @@ public class MainActivity extends AppCompatActivity {
 /**        fetches data of all fields. then send json to server.
 *        this method uses the VOLLEY module and
 *        Check_constraints class instance used to check validity of user input **/
+
+        String regis="Registering ...";
+        Toast.makeText(MainActivity.this,regis,Toast.LENGTH_SHORT).show();
         String url = "http://agni.iitd.ernet.in/cop290/assign0/register/";
         final EditText Name1 = (EditText) findViewById(R.id.Name1);
         final EditText Entry1 = (EditText) findViewById(R.id.Entry1);
@@ -248,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText Entry3 = (EditText) findViewById(R.id.Entry3);
         Button add=(Button) findViewById(R.id.add);
         Button sub=(Button) findViewById(R.id.sub);
-        boolean b=(add.getVisibility()==View.VISIBLE);
+        boolean b=(add.getVisibility()==View.VISIBLE); //return true if + visible
         final EditText teamname = (EditText) findViewById(R.id.TeamText);
         final TextView message=(TextView) findViewById(R.id.msg);
         final Intent i=new Intent(this,FinalScreen.class);
@@ -263,10 +264,10 @@ public class MainActivity extends AppCompatActivity {
         if(!checker.teamname(teamname.getText().toString()))
         {   message.setVisibility(View.INVISIBLE);
             Log.i("this", teamname.getText().toString());
-            message.setText("TeamName should contain only Letters");
+            message.setText("Enter your TeamName");
             pop();
         }
-        else if(!((checker.NAME(Name1.getText().toString()))&&(checker.NAME(Name1.getText().toString()))&&(checker.NAME(Name1.getText().toString()))))
+        else if(!((checker.NAME(Name1.getText().toString(),false))&&(checker.NAME(Name2.getText().toString(),false))&&(checker.NAME(Name3.getText().toString(),b))))
         {   message.setVisibility(View.INVISIBLE);
             Log.i("this", Name1.getText().toString());
             message.setText("Enter a valid name");
@@ -291,11 +292,12 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(String response) {
                             String str=response.toString();
+                            String regis=" Registering...";
                             String success="{\"RESPONSE_SUCCESS\": 1, \"RESPONSE_MESSAGE\": \"Registration completed\"}";
                             Log.i("yo",str);
                             String Already_reg="{\"RESPONSE_SUCCESS\": 0, \"RESPONSE_MESSAGE\": \"User already registered\"}";
                             String data_not_posted="{\"RESPONSE_SUCCESS\": 0, \"RESPONSE_MESSAGE\": \"Data not posted!\"}";
-                            Toast.makeText(MainActivity.this, str, Toast.LENGTH_LONG).show();
+                            //Toast.makeText(MainActivity.this, regis, Toast.LENGTH_SHORT).show();
                             if(str.equals(success))
                             {String TeamName = teamname.getText().toString();
                                 i.putExtra("TeamName", TeamName);
@@ -322,11 +324,13 @@ public class MainActivity extends AppCompatActivity {
                             else if(str.equals(Already_reg))
                             {   message.setVisibility(View.VISIBLE);
                                 message.setText("Team or team members are already registered");
+                                pop();
                             }
 
                             else
                             {   message.setVisibility(View.VISIBLE);
                                 message.setText("Data not posted!! Check your Net connection and try again");
+
 
                             }
                             //   tt.setText(response.toString() + " is the response from the server.");
@@ -337,7 +341,11 @@ public class MainActivity extends AppCompatActivity {
                     {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
+                            //Toast.makeText(MainActivity.this, error.toString(), Toast.LENGTH_LONG).show();
+                            message.setVisibility(View.VISIBLE);
+                            message.setText("Data not posted!! Check your Net connection and try again");
+
+
                         }
                     }) {
                 @Override

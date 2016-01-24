@@ -27,12 +27,14 @@ public class Check_constraints
 //        }
         return true;
     }
-    public boolean NAME(String name)
+    public boolean NAME(String name,boolean b)
     {   /** Checks for validity of name. Name should have only only alphabets **/
+        if(b)
+            return true;
         if(name.length()==0)
         return false;
         for(int i=0;i<name.length();i++)
-        {if(!isAlphabetic(name.charAt(i)))
+        {if(!isAlphabetic(name.charAt(i))&& name.charAt(i)!=' ')
         {return false;
         }
         }
@@ -48,7 +50,7 @@ public class Check_constraints
             return false;
         if(entryno.charAt(0)!='2'||entryno.charAt(1)!='0')
             return false;
-        if(!isAlphabetic(entryno.charAt(4))&&!isAlphabetic(entryno.charAt(5)))
+        if(!isAlphabetic(entryno.charAt(4))||!isAlphabetic(entryno.charAt(5)))
             return false;
         for(int i=6;i<l;i++)
         {
@@ -59,7 +61,7 @@ public class Check_constraints
     }
     public boolean Diff_EntryNo(String entry1,String entry2,String entry3,boolean b)
     {/** Checks if the all the Entry No entered are different **/
-        if(b) {
+        if(!b) {
         if (entry1.equals(entry2) || entry1.equals(entry3) || entry2.equals(entry3))
             return false;
     }

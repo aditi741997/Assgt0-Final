@@ -181,7 +181,7 @@
         android:text="@string/Button_Text"
         android:id="@+id/button"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="450dp"
         android:layout_centerHorizontal="true"
         android:onClick="Register" />
 
@@ -192,7 +192,7 @@
         android:text="@string/question"
         android:id="@+id/SmallText"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="455dp"
+        android:layout_marginTop="500dp"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
